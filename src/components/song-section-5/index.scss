@@ -1,0 +1,12 @@
+.song-section-5{
+    .image-wrapper{
+        position: absolute;
+        top: 0;
+        right: 0;
+        display: flex;
+        flex-direction: column;
+        img{
+            position: unset;
+        }
+    }
+}

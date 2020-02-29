@@ -4,7 +4,7 @@ import image1 from '../../assets/rose.png'
 import image2 from '../../assets/demasho.png'
 import './index.scss'
 
-const SongSection1 = () => {
+const SongSection2 = () => {
     const { songSection2 } = useContext(I18nContext)
 
     return (
@@ -18,8 +18,6 @@ const SongSection1 = () => {
                 </div>
                 <div className="col-md-7">
                     <p>{songSection2.text1}</p>
-                </div>
-                <div className="col-md-7">
                     <p>{songSection2.text2}</p>
                     <p>{songSection2.text3}</p>
                 </div>
@@ -34,4 +32,4 @@ const SongSection1 = () => {
     )
 }
 
-export default SongSection1
+export default SongSection2
