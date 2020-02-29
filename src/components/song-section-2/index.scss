@@ -1,0 +1,13 @@
+.song-section-2 {
+    position: relative;
+    .video-section {
+        i {
+            display: block;
+            max-width: 250px;
+            margin-bottom: 20px;
+        }
+    }
+    .image{
+        position: absolute;
+    }
+}

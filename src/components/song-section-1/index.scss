@@ -1,0 +1,27 @@
+.song-section1 {
+  position: relative;
+  .poem {
+    margin: 40px 70px 80px;
+  }
+  .image-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    right: 0;
+    width: 600px;
+    text-align: center;
+    .image-caption {
+      width: 225px;
+    }
+  }
+  .star-image {
+    position: absolute;
+    top: -100px;
+    right: -70px;
+    width: 650px;
+  }
+  .youtube-iframe{
+    margin-bottom: 20px;
+  }
+}
