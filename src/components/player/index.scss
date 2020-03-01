@@ -1,0 +1,10 @@
+@import '../../styles/vars';
+
+.player-wrapper{
+    background-color: $player-color;
+    padding: 20px;
+    .player-btn{
+        background-color: transparent;
+        border: none;
+    }
+}

@@ -2,12 +2,13 @@ import React from 'react'
 import Helmet from 'react-helmet'
 import BannerSection from '../components/banner-section'
 import '../styles/index.scss'
-import SongSection1 from '../components/song-section-1';
-import SongSection2 from '../components/song-section-2';
-import SongSection3 from '../components/song-section-3';
-import SongSection4 from '../components/song-section-4';
-import SongSection5 from '../components/song-section-5';
-import SongSection6 from '../components/song-section-6';
+import Player from '../components/player'
+import SongSection1 from '../components/song-section-1'
+import SongSection2 from '../components/song-section-2'
+import SongSection3 from '../components/song-section-3'
+import SongSection4 from '../components/song-section-4'
+import SongSection5 from '../components/song-section-5'
+import SongSection6 from '../components/song-section-6'
 
 export const I18nContext = React.createContext();
 
@@ -28,6 +29,8 @@ const Layout = ({ data }) => {
                 ]}
             >
             </Helmet>
+
+            <Player />
 
             <BannerSection />
             <SongSection1 />
