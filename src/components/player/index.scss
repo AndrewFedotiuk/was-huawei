@@ -1,10 +1,60 @@
-@import '../../styles/vars';
+@import "../../styles/vars";
 
-.player-wrapper{
-    background-color: $player-color;
-    padding: 20px;
-    .player-btn{
-        background-color: transparent;
-        border: none;
-    }
+.player-wrapper {
+	position: fixed;
+	top: 0;
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background-color: $player-color;
+	box-shadow: -10px 10px 80px $shadow-color;
+	padding: 20px;
+	z-index: 10;
+
+	.player {
+		&-btn {
+			background-color: transparent;
+			border: none;
+			margin: 0 30px;
+		}
+
+		&-status {
+			height: 25px;
+		}
+
+		&-input {
+			-webkit-appearance: none;
+			width: 60px;
+			margin: 0 30px;
+			&:focus {
+				outline: none;
+			}
+			&::-webkit-slider-thumb{
+				-webkit-appearance: none;
+				width: 12px;
+				height: 12px;
+				background: $black-color;
+				border-radius: 50%;
+				margin-top: -4px;
+			}
+			&::-webkit-slider-runnable-track{
+				height: 3px;
+				background: $black-color;
+
+			}
+			&:hover {
+				cursor: pointer;
+			}
+		}
+	}
+
+	.flex-end {
+		display: flex;
+		margin-left: auto;
+	}
+	.control-wrapper{
+		display: flex;
+		align-items: center;
+	}
 }
