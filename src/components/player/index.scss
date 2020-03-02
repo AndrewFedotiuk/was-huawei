@@ -9,6 +9,13 @@
 	padding: 20px 0;
 	z-index: 10;
 
+	.road-map{
+		position: absolute;
+		bottom: -2px;
+		height: 4px;
+		background-color: $black-color;
+	}
+
 	.control-wrapper {
 		display: flex;
 		align-items: center;

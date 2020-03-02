@@ -2,6 +2,7 @@ import React, { useContext } from 'react'
 import './index.scss'
 import image1 from '../../assets/photo2.png'
 import { I18nContext } from '../../layouts/base-layout'
+import SongIndexHelper from "../song-index-helper";
 
 
 const SongSection6 = () => {
@@ -14,6 +15,8 @@ const SongSection6 = () => {
                     <img className='image' style={{ bottom: '60px', right: '0' }} src={image1} alt="Winner" />
 
                     <h2>{songSection6.header}</h2>
+                    {SongIndexHelper(6)}
+
                 </div>
                 <div className="col-md-7">
                     {

@@ -3,9 +3,10 @@ import './index.scss'
 import image1 from '../../assets/wagner.png'
 import image2 from '../../assets/vagner.png'
 import { I18nContext } from '../../layouts/base-layout'
+import SongIndexHelper from "../song-index-helper";
 
 const SongSection3 = () => {
-    const { songSection3 } = useContext(I18nContext)
+    const { songSection3 } = useContext(I18nContext);
 
     return (
         <section className='container song-section'>
@@ -13,8 +14,9 @@ const SongSection3 = () => {
 
                 <div className="col-12">
                     <img style={{ top: '250px', right: '-150px' }} className='image' src={image1} alt="Rose" />
-                    <img style={{ top: '0px', right: '330px' }} className='image' src={image2} alt="Rose" />
+                    <img style={{ top: '0px', right: '330px', zIndex: -1}} className='image' src={image2} alt="Rose" />
                     <h2>{songSection3.header}</h2>
+                    {SongIndexHelper(3)}
                 </div>
 
                 <div className="col-md-7">
@@ -30,7 +32,7 @@ const SongSection3 = () => {
             </div>
         </section >
     )
-}
+};
 
 
 export default SongSection3

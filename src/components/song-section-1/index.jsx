@@ -3,6 +3,7 @@ import { I18nContext } from '../../layouts/base-layout'
 import saphoImage from '../../assets/sapho.png'
 import starImage from '../../assets/star.png'
 import './index.scss'
+import SongIndexHelper from "../song-index-helper";
 
 const SongSection1 = () => {
     const { songSection1 } = useContext(I18nContext)
@@ -15,7 +16,10 @@ const SongSection1 = () => {
                     <img className='star-image' src={starImage} alt="star" />
                     <p className="image-caption"><i>{songSection1.imageCaption}</i></p>
                 </div>
-                <h2 className='col'>{songSection1.header}</h2>
+                <div className="header-wrapper">
+                    <h2 className='col'>{songSection1.header}</h2>
+                    {SongIndexHelper(1)}
+                </div>
                 <div className="col-md-7">
                     <p>{songSection1.text1}</p>
                     <p>{songSection1.text2}</p>

@@ -2,6 +2,7 @@ import React, { useContext } from 'react'
 import './index.scss'
 import image1 from '../../assets/man.png'
 import { I18nContext } from '../../layouts/base-layout'
+import SongIndexHelper from "../song-index-helper";
 
 const SongSection4 = () => {
     const { songSection4 } = useContext(I18nContext)
@@ -15,6 +16,8 @@ const SongSection4 = () => {
                     <img style={{ bottom: '-200px', left: '-300px', transform: 'rotate(40deg)' }} className='image' src={image1} alt="Man" />
                     <img style={{ bottom: '250px', left: '-250px' }} className='image' src={image1} alt="Man" />
                     <h2>{songSection4.header}</h2>
+                    {SongIndexHelper(4)}
+
                 </div>
                 <div className="col-md-7">
                     <p>{songSection4.text1}</p>

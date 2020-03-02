@@ -3,6 +3,7 @@ import { I18nContext } from '../../layouts/base-layout'
 import image1 from '../../assets/rose.png'
 import image2 from '../../assets/demasho.png'
 import './index.scss'
+import SongIndexHelper from "../song-index-helper";
 
 const SongSection2 = () => {
     const { songSection2 } = useContext(I18nContext)
@@ -11,6 +12,7 @@ const SongSection2 = () => {
         <section className="container song-section song-section-2">
             <div className="row">
                 <div className="col-12">
+                    {SongIndexHelper(2)}
                     <h2>{songSection2.header}</h2>
                     <p><i>{songSection2.headerCaption}</i></p>
                     <img style={{ top: '300px', left: '-150px' }} className='image' src={image1} alt="Rose" />

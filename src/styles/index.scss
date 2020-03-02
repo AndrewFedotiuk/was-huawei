@@ -52,6 +52,16 @@ h2 {
 	transform: scaleX(-1);
 }
 
+.song-index{
+	position: absolute;
+	top: 10px;
+	left: 0;
+	font-family: 'DIN Condensed';
+	transform: translateX(-100%);
+	font-size: 32px;
+	color: $index-color;
+}
+
 [disabled]{
 	color: $gray-color;
 	fill: $gray-color;

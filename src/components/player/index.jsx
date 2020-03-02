@@ -2,12 +2,14 @@ import React, {useState} from 'react'
 import ReactHowler from 'react-howler'
 import raf from 'raf' // requestAnimationFrame polyfill
 import testSong from '../../assets/BS_TF.mp3'
+import chistmasSong from '../../assets/chistmas.mp3'
 import './index.scss'
 import Pause from "./pause";
 import Play from "./play";
 import UnMute from "./unmute";
 import Mute from "./mute";
 import Arrow from "./arrow";
+import {percent, updateTime} from "./utils";
 
 let player = React.createRef(),
 	_raf;
@@ -18,8 +20,8 @@ const songs = [
 		id: 0
 	},
 	{
-		name: 'Фрагмент 31,<br> Сапфо 2',
-		src: testSong,
+		name: 'chistmas Song 31,<br> Сапфо 2',
+		src: chistmasSong,
 		id: 1
 	}
 ];
@@ -70,12 +72,10 @@ const Player = () => {
 
 
 	const handleOnEnd = () => {
-		console.log(player, 'end');
-
-		setValues({
-			...playerValues,
+		setValues(prevState => ({
+			...prevState,
 			playing: false
-		});
+		}));
 		clearRAF()
 	};
 
@@ -87,7 +87,6 @@ const Player = () => {
 	};
 
 	const clearRAF = () => {
-		console.log(_raf);
 		raf.cancel(_raf)
 	};
 
@@ -98,11 +97,6 @@ const Player = () => {
 		}))
 	};
 
-	const updateTime = (time) => {
-		time = (time / 60).toFixed(2).toString().replace('.', ':');
-		return time
-	};
-
 	const volumeHandler = ({target}) => {
 		setValues({
 			...playerValues,
@@ -110,24 +104,40 @@ const Player = () => {
 		})
 	};
 
-	const handleNext = (e,side = false) => {
-		if (side) {
-			setSong(prevState => ({
-				...prevState,
-				activeSong: prevState.songs[(prevState.activeSong.id - 1)]
-			}))
+	const handleNext = (e, side = false) => {
+		if (side) setNextHelper(-1);
+		else setNextHelper();
+		handleOnPlay();
+	};
 
-		} else {
-			setSong(prevState => ({
-				...prevState,
-				activeSong: prevState.songs[prevState.activeSong.id + 1]
-			}))
+	const scrollToIndex = (index) => {
+		const element = document.getElementById(`songIndex${index}`);
+
+		if (element) {
+			window.scroll({
+				top: (element.getBoundingClientRect().top + window.scrollY) - 150,
+				behavior: 'smooth',
+			})
 		}
 	};
 
+	const setNextHelper = (indicator = 1) => {
+		setSong(prevState => {
+			const id = prevState.activeSong.id + indicator;
+			scrollToIndex(id + 1);
+			return {
+				...prevState,
+				activeSong: prevState.songs[id]
+			}
+		});
+
+	};
 
 	return (
 		<div className='player'>
+			<div className="road-map"
+			     style={{width: `${percent(playerValues.seek, playerValues.duration)}%`}}
+			/>
 			<ReactHowler
 				src={[songController.activeSong.src]}
 				playing={playerValues.playing}
@@ -143,19 +153,19 @@ const Player = () => {
 				<div className="row">
 
 					<div className='col col-md-3 control-wrapper'>
-						<button disabled={songController.activeSong.id === 0} onClick={() => handleNext(e=null,'prev')}
+						<button disabled={songController.activeSong.id <= 0} onClick={() => handleNext(null, 'prev')}
 						        className="player-btn btn-arrow btn-m">
 							<Arrow/>
 						</button>
 						<button className='player-btn btn-m' onClick={handleToggle}>
 							{(playerValues.playing) ? <Pause/> : <Play/>}
 						</button>
-						<button disabled={songController.activeSong.id === songController.songs.length-1}
+						<button disabled={songController.activeSong.id >= songController.songs.length - 1}
 						        onClick={handleNext} className="player-btn flip-horizontally btn-m">
 							<Arrow/>
 						</button>
 						<span className='player-status d-none d-sm-inline'>
-                            {(playerValues.seek !== undefined) ? updateTime(playerValues.seek) : '0:00'}
+                            {!isNaN(playerValues.seek) ? updateTime(playerValues.seek) : '0:00'}
 							{' / '}
 							{(playerValues.duration) ? updateTime(playerValues.duration) : 'Loading...'}
                         </span>
@@ -178,7 +188,6 @@ const Player = () => {
 
 					</div>
 				</div>
-
 			</div>
 		</div>
 	)

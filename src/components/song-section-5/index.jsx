@@ -2,15 +2,16 @@ import React, { useContext } from 'react'
 import './index.scss'
 import image1 from '../../assets/photo.png'
 import { I18nContext } from '../../layouts/base-layout'
+import SongIndexHelper from "../song-index-helper";
 
 
 const images = [...new Float32Array(4)].map(
     (_, index) => <img key={index} className='image' style={{ opacity: `${0.35 - index * 0.1}` }} src={image1} alt="Winner" />
-)
+);
 
 
 const SongSection4 = () => {
-    const { songSection5 } = useContext(I18nContext)
+    const { songSection5 } = useContext(I18nContext);
 
     return (
         <section className='container song-section song-section-5'>
@@ -22,6 +23,8 @@ const SongSection4 = () => {
                     </div>
 
                     <h2>{songSection5.header}</h2>
+                    {SongIndexHelper(5)}
+
                 </div>
                 <div className="col-md-7">
                     <p>{songSection5.text1}</p>
