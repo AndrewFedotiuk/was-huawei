@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import ReactHowler from 'react-howler'
 import raf from 'raf' // requestAnimationFrame polyfill
 import testSong from '../../assets/BS_TF.mp3'
@@ -19,7 +19,6 @@ const Play = () => (
 let player = React.createRef(),
     _raf
 
-
 const Player = () => {
     const [playerValues, setValues] = useState({
         playing: false,
@@ -30,7 +29,7 @@ const Player = () => {
     })
 
     const handleOnLoad = () => {
-        console.log('loaded');
+        console.log('loaded')
 
         setValues({
             ...playerValues,
@@ -40,23 +39,25 @@ const Player = () => {
     }
 
     const handleOnPlay = () => {
-
-        setValues(prevState=>({
+        setValues(prevState => ({
             ...prevState,
             playing: true
-        }), renderSeekPos())
+        }))
+
+        renderSeekPos()
+
     }
 
     const renderSeekPos = () => {
-        setValues(prevState=>({
-            ...prevState,
-            seek: player.current.seek()
-        }), console.log(playerValues))
-
-        if (playerValues.playing) _raf = raf(renderSeekPos)
-
-        
+        setValues(prevState => {
+            if (prevState.playing) _raf = raf(renderSeekPos)
+            return {
+                ...prevState,
+                seek: player.current.seek()
+            }
+        })
     }
+
 
     const handleOnEnd = () => {
         console.log(player, 'end');
@@ -69,7 +70,8 @@ const Player = () => {
     }
 
     const clearRAF = () => {
-        _raf.cancel()
+        console.log(_raf)
+        raf.cancel(_raf)
     }
 
     const handleToggle = () => {
@@ -78,10 +80,6 @@ const Player = () => {
             playing: !prevState.playing
         }))
     }
-
-    useEffect(() => {
-        if (_raf) return () => { clearRAF() }
-    });
 
 
     return (

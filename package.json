@@ -30,6 +30,7 @@
   ],
   "license": "MIT",
   "scripts": {
+    "dev": "gatsby develop -H 10.5.4.160 -p 8000",
     "build": "gatsby build",
     "develop": "gatsby develop"
   }
