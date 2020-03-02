@@ -5,6 +5,7 @@
 @import './vars';
 // Optional
 @import '~bootstrap/scss/reboot';
+@import '~bootstrap/scss/utilities';
 @import '~bootstrap/scss/grid';
 body {
 	background-color: $bg-color;
@@ -45,4 +46,13 @@ h2 {
 	.image {
 		position: absolute;
 	}
+}
+
+.flip-horizontally {
+	transform: scaleX(-1);
+}
+
+[disabled]{
+	color: $gray-color;
+	fill: $gray-color;
 }
