@@ -1,5 +1,14 @@
-.song-section-5{
-	.m{
+@import '../../styles/vars';
+
+.song-section-5 {
+	.m {
 		padding: 150px 0;
+	}
+
+	@include media-breakpoint-down(sm) {
+		.image{
+			position: unset;
+			width: 100%;
+		}
 	}
 }

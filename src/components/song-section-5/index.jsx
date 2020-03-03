@@ -18,13 +18,12 @@ const SongSection4 = () => {
         <section className='container song-section song-section-5'>
             <div className="row">
                 <div className="col-12">
+                    <h2 className='col col-sm-8'>{songSection5.header}</h2>
                     <div className="image-wrapper">
                         <img src={image1} alt="Winner" />
                         {images}
-                        <img style={{bottom: '-25px', right:'50%', transform: 'translateX(50%)'}} className='position-absolute' src={box} alt="Headphones" />
+                        <img style={{bottom: '0px', right:'50%', transform: 'translateX(50%)'}} className='position-absolute' src={box} alt="Headphones" />
                     </div>
-
-                    <h2 className='col col-sm-8'>{songSection5.header}</h2>
                     {SongIndexHelper(5)}
 
                 </div>

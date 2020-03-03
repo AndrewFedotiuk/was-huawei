@@ -20,7 +20,7 @@ const Layout = ({ data }) => {
                 title="Gatsby Default Starter"
 
                 link={[
-                    { "rel": "stylesheet", "href": "https://use.typekit.net/hkx6ahs.css" },
+                    { "rel": "stylesheet", "href": "https://fonts.googleapis.com/css?family=PT+Serif&display=swap" },
                 ]}
 
                 meta={[

@@ -14,9 +14,9 @@ const SongSection2 = () => {
                 <div className="col-12">
                     {SongIndexHelper(2)}
                     <h2>{songSection2.header}</h2>
-                    <p><i>{songSection2.headerCaption}</i></p>
-                    <img style={{ top: '250px', left: '-150px' }} className='image' src={image1} alt="Rose" />
-                    <img style={{ top: '250px', right: '-100px' }} className='image' src={image2} alt="Demasho" />
+                    <p className='caption'><i>{songSection2.headerCaption}</i></p>
+                    <img style={{ top: '40%', left: '-12%' }} className='image image-rose' src={image1} alt="Rose" />
+                    <img style={{ top: '34%', right: '-7%' }} className='image image-man' src={image2} alt="Demasho" />
                 </div>
                 <div className="col-md-7">
                     <p>{songSection2.text1}</p>

@@ -12,10 +12,10 @@ const SongSection6 = () => {
     return (
         <section className='container song-section song-section-5'>
             <div className="row">
-                <div className="col-12">
+                <div className="col-sm-10">
+                    <h2 className='col-sm-8'>{songSection6.header}</h2>
                     <img className='image' style={{ bottom: '60px', right: '0' }} src={image1} alt="Winner" />
 
-                    <h2>{songSection6.header}</h2>
                     {SongIndexHelper(6)}
 
                 </div>

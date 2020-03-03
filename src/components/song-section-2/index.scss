@@ -1,0 +1,15 @@
+@import '../../styles/vars';
+
+.song-section-2 {
+	@include media-breakpoint-down(sm) {
+		.caption {
+			margin: 100px 0;
+		}
+		.image-rose{
+			width: 83px;
+		}
+		.image-man{
+			width: 150px;
+		}
+	}
+}

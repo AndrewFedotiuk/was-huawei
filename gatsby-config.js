@@ -10,6 +10,6 @@ module.exports = {
         langKeyDefault: languages.defaultLangKey,
         useLangKeyLayout: false
       }
-    }
+    },
   ],
-}
+};

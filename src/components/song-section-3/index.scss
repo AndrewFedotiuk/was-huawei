@@ -1,0 +1,12 @@
+@import '../../styles/vars';
+
+.song-section-3 {
+	@include media-breakpoint-down(sm) {
+		.wagner-small{
+			width: 60px;
+		}
+		.wagner{
+			width: 350px;
+		}
+	}
+}

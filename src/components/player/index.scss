@@ -9,6 +9,12 @@
 	padding: 20px 0;
 	z-index: 10;
 
+	.player-wrapper{
+		display: flex;
+		justify-content: space-between;
+		padding: 0 30px;
+	}
+
 	.road-map{
 		position: absolute;
 		bottom: -2px;

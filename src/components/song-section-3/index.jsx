@@ -9,12 +9,11 @@ const SongSection3 = () => {
     const { songSection3 } = useContext(I18nContext);
 
     return (
-        <section className='container song-section'>
+        <section className='container song-section song-section-3'>
             <div className="row">
-
                 <div className="col-12">
-                    <img style={{ top: '250px', right: '50px' }} className='image' src={image1} alt="Rose" />
-                    <img style={{ top: '0px', right: '330px', zIndex: -1}} className='image' src={image2} alt="Rose" />
+                    <img style={{ top: '33%', right: '3%' }} className='image wagner' src={image1} alt="Wagner" />
+                    <img style={{ top: '0px', right: '30%', zIndex: -1}} className='image wagner-small' src={image2} alt="Wagner small" />
                     <h2>{songSection3.header}</h2>
                     {SongIndexHelper(3)}
                 </div>

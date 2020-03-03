@@ -1,9 +1,20 @@
-.song-section-5{
-    .image-wrapper{
-        position: absolute;
-        top: 0;
-        right: 200px;
-        display: flex;
-        flex-direction: column;
-    }
+@import '../../styles/vars';
+
+.song-section-5 {
+	.image-wrapper {
+		position: absolute;
+		top: 0;
+		right: 30px;
+		display: flex;
+		flex-direction: column;
+	}
+
+	@include media-breakpoint-down(sm) {
+        .image-wrapper{
+            position: unset;
+            img{
+                height: 220px;
+            }
+        }
+	}
 }

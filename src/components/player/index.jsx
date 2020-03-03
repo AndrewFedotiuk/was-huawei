@@ -149,10 +149,9 @@ const Player = () => {
 				volume={playerValues.volume}
 				ref={player}
 			/>
-			<div className="container-fluid player-wrapper">
-				<div className="row">
+			<div className="player-wrapper">
 
-					<div className='col col-md-3 control-wrapper'>
+					<div className='control-wrapper'>
 						<button disabled={songController.activeSong.id <= 0} onClick={() => handleNext(null, 'prev')}
 						        className="player-btn btn-arrow btn-m">
 							<Arrow/>
@@ -170,8 +169,8 @@ const Player = () => {
 							{(playerValues.duration) ? updateTime(playerValues.duration) : 'Loading...'}
                         </span>
 					</div>
-					<span className='col' dangerouslySetInnerHTML={{__html: songController.activeSong.name}}/>
-					<div className='col col-sm-3 control-wrapper d-flex justify-content-end'>
+					<span className='' dangerouslySetInnerHTML={{__html: songController.activeSong.name}}/>
+					<div className='control-wrapper d-flex justify-content-end'>
 						<input
 							className='player-input d-none d-sm-inline'
 							type='range'
@@ -187,7 +186,6 @@ const Player = () => {
 						</button>
 
 					</div>
-				</div>
 			</div>
 		</div>
 	)

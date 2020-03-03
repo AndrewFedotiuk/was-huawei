@@ -1,6 +1,12 @@
+@import '~bootstrap/scss/functions';
+@import '~bootstrap/scss/variables';
+@import '~bootstrap/scss/mixins';
+
 $base-font-size: 22px;
 $logo-font-size: 98px;
+$logo-font-size-sm: 39px;
 $header-font-size: 198px;
+$header-font-size-sm: 64px;
 
 $black-color: #09090A;
 $bg-color: #f4dddb;
