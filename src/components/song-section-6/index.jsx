@@ -10,7 +10,7 @@ const SongSection6 = () => {
     const { songSection6 } = useContext(I18nContext)
 
     return (
-        <section className='container song-section song-section-5'>
+        <section className='container song-section song-section-6'>
             <div className="row">
                 <div className="col-sm-10">
                     <h2 className='col-sm-8'>{songSection6.header}</h2>

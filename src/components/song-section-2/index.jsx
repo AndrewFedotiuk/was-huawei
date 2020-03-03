@@ -4,6 +4,7 @@ import image1 from '../../assets/rose.png'
 import image2 from '../../assets/demasho.png'
 import './index.scss'
 import SongIndexHelper from "../song-index-helper";
+import WithHeaderAnimation from "../WithHeaderAnimation";
 
 const SongSection2 = () => {
     const { songSection2 } = useContext(I18nContext);
@@ -13,7 +14,8 @@ const SongSection2 = () => {
             <div className="row">
                 <div className="col-12">
                     {SongIndexHelper(2)}
-                    <h2>{songSection2.header}</h2>
+                    {WithHeaderAnimation([songSection2.header])}
+                    {/*<h2>{songSection2.header}</h2>*/}
                     <p className='caption'><i>{songSection2.headerCaption}</i></p>
                     <img style={{ top: '40%', left: '-12%' }} className='image image-rose' src={image1} alt="Rose" />
                     <img style={{ top: '34%', right: '-7%' }} className='image image-man' src={image2} alt="Demasho" />

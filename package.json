@@ -16,7 +16,9 @@
     "react": "^16.13.0",
     "react-dom": "^16.13.0",
     "react-helmet": "^5.2.1",
-    "react-howler": "^3.7.4"
+    "react-howler": "^3.7.4",
+    "react-intersection-observer": "^8.26.1",
+    "react-spring": "^8.0.27"
   },
   "devDependencies": {
     "@hot-loader/react-dom": "^16.12.0",
