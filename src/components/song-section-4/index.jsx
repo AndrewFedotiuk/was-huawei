@@ -13,9 +13,9 @@ const SongSection4 = () => {
             <div className="row">
                 <div className="col-12">
                     <img style={{ top: '-100px', right: '-50px', transform: 'rotate(-40deg)' }} className='image' src={image1} alt="Man" />
-                    <img style={{ top: '400px', right: '-50px' }} className='image' src={image1} alt="Man" />
-                    <img style={{ bottom: '-200px', left: '-300px', transform: 'rotate(40deg)' }} className='image' src={image1} alt="Man" />
-                    <img style={{ bottom: '250px', left: '-250px' }} className='image' src={image1} alt="Man" />
+                    <img style={{ top: '400px', right: '-50px' }} className='image d-none d-sm-block' src={image1} alt="Man" />
+                    <img style={{ bottom: '-200px', left: '-300px', transform: 'rotate(40deg)' }} className='image d-none d-sm-block' src={image1} alt="Man" />
+                    <img style={{ bottom: '250px', left: '-250px' }} className='image d-none d-sm-block' src={image1} alt="Man" />
                     <img style={{ bottom: '-250px', right: '-250px' }} className='image' src={boxImage} alt="Headphones" />
                     <h2>{songSection4.header}</h2>
                     {SongIndexHelper(4)}

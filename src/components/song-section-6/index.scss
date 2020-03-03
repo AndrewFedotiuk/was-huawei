@@ -4,6 +4,9 @@
 	.m {
 		padding: 150px 0;
 	}
+	.image{
+		margin-bottom: 40px;
+	}
 
 	@include media-breakpoint-down(sm) {
 		.image{
