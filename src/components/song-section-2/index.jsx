@@ -6,7 +6,7 @@ import './index.scss'
 import SongIndexHelper from "../song-index-helper";
 
 const SongSection2 = () => {
-    const { songSection2 } = useContext(I18nContext)
+    const { songSection2 } = useContext(I18nContext);
 
     return (
         <section className="container song-section song-section-2">
@@ -15,8 +15,8 @@ const SongSection2 = () => {
                     {SongIndexHelper(2)}
                     <h2>{songSection2.header}</h2>
                     <p><i>{songSection2.headerCaption}</i></p>
-                    <img style={{ top: '300px', left: '-150px' }} className='image' src={image1} alt="Rose" />
-                    <img style={{ top: '300px', right: '-150px' }} className='image' src={image2} alt="Demasho" />
+                    <img style={{ top: '250px', left: '-150px' }} className='image' src={image1} alt="Rose" />
+                    <img style={{ top: '250px', right: '-100px' }} className='image' src={image2} alt="Demasho" />
                 </div>
                 <div className="col-md-7">
                     <p>{songSection2.text1}</p>
@@ -32,6 +32,6 @@ const SongSection2 = () => {
             </div>
         </section>
     )
-}
+};
 
 export default SongSection2

@@ -1,12 +1,13 @@
 import React, { useContext } from 'react'
 import './index.scss'
 import image1 from '../../assets/photo.png'
+import box from '../../assets/box-h.png'
 import { I18nContext } from '../../layouts/base-layout'
 import SongIndexHelper from "../song-index-helper";
 
 
 const images = [...new Float32Array(4)].map(
-    (_, index) => <img key={index} className='image' style={{ opacity: `${0.35 - index * 0.1}` }} src={image1} alt="Winner" />
+    (_, index) => <img key={index} style={{ opacity: `${0.35 - index * 0.1}` }} src={image1} alt="Winner" />
 );
 
 
@@ -18,11 +19,12 @@ const SongSection4 = () => {
             <div className="row">
                 <div className="col-12">
                     <div className="image-wrapper">
-                        <img className='image' src={image1} alt="Winner" />
+                        <img src={image1} alt="Winner" />
                         {images}
+                        <img style={{bottom: '-25px', right:'50%', transform: 'translateX(50%)'}} className='position-absolute' src={box} alt="Headphones" />
                     </div>
 
-                    <h2>{songSection5.header}</h2>
+                    <h2 className='col col-sm-8'>{songSection5.header}</h2>
                     {SongIndexHelper(5)}
 
                 </div>

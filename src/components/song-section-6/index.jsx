@@ -1,6 +1,7 @@
 import React, { useContext } from 'react'
 import './index.scss'
 import image1 from '../../assets/photo2.png'
+import boxImage from '../../assets/box-v.png'
 import { I18nContext } from '../../layouts/base-layout'
 import SongIndexHelper from "../song-index-helper";
 
@@ -28,9 +29,12 @@ const SongSection6 = () => {
                     <i>{songSection6.videoCaption}</i>
                 </div>
             </div>
+            <div className="row">
+                <img className='col-md-6 offset-md-6 m' src={boxImage} alt="Headphones" />
+            </div>
         </section >
     )
-}
+};
 
 
 export default SongSection6

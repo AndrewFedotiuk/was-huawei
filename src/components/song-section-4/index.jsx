@@ -1,6 +1,7 @@
 import React, { useContext } from 'react'
 import './index.scss'
 import image1 from '../../assets/man.png'
+import boxImage from '../../assets/box.png'
 import { I18nContext } from '../../layouts/base-layout'
 import SongIndexHelper from "../song-index-helper";
 
@@ -11,10 +12,11 @@ const SongSection4 = () => {
         <section className='container song-section'>
             <div className="row">
                 <div className="col-12">
-                    <img style={{ top: '-100px', right: '-250px', transform: 'rotate(-40deg)' }} className='image' src={image1} alt="Man" />
-                    <img style={{ top: '500px', right: '-250px' }} className='image' src={image1} alt="Man" />
+                    <img style={{ top: '-100px', right: '-50px', transform: 'rotate(-40deg)' }} className='image' src={image1} alt="Man" />
+                    <img style={{ top: '400px', right: '-50px' }} className='image' src={image1} alt="Man" />
                     <img style={{ bottom: '-200px', left: '-300px', transform: 'rotate(40deg)' }} className='image' src={image1} alt="Man" />
                     <img style={{ bottom: '250px', left: '-250px' }} className='image' src={image1} alt="Man" />
+                    <img style={{ bottom: '-100px', right: '-150px' }} className='image' src={boxImage} alt="Headphones" />
                     <h2>{songSection4.header}</h2>
                     {SongIndexHelper(4)}
 

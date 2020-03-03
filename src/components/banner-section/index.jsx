@@ -10,8 +10,8 @@ const BannerSection = () => {
     return (
         <section className='banner-section'>
             <div className="image-wrapper">
-                <img style={{ top: '100px', right: '150px' }} className='earphone' src={image1} alt="Earphone" />
-                <img style={{ top: '-20px', right: '0' }} className='earphone' src={image2} alt="Earphone" />
+                <img style={{ top: '180px', right: '230px' }} className='earphone' src={image1} alt="Earphone" />
+                <img style={{ top: '60px', right: '150px' }} className='earphone' src={image2} alt="Earphone" />
             </div>
 
             <div className="container">

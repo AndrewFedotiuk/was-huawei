@@ -12,8 +12,8 @@ const SongSection1 = () => {
         <section className="container song-section song-section1">
             <div className="row">
                 <div className="image-wrapper">
-                    <img className='sapho-image' src={saphoImage} alt="Sapho" />
-                    <img className='star-image' src={starImage} alt="star" />
+                    <img src={saphoImage} alt="Sapho" />
+                    <img style={{ top: '20px', right: '-40px' }} className='image' src={starImage} alt="Star" />
                     <p className="image-caption"><i>{songSection1.imageCaption}</i></p>
                 </div>
                 <div className="header-wrapper">
