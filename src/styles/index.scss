@@ -59,7 +59,7 @@ h2 {
 	position: absolute;
 	top: 35px;
 	left: 0;
-	font-family: 'DIN Condensed';
+	font-family: 'DIN';
 	transform: translateX(-100%);
 	font-size: 32px;
 	color: $index-color;
@@ -69,6 +69,10 @@ h2 {
 	color: $gray-color;
 	fill: $gray-color;
 }
+//
+//.transition{
+//	//transition: all .5s;
+//}
 
 @include media-breakpoint-down(sm) {
 	.video-section {
