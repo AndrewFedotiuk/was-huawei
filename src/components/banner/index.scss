@@ -1,0 +1,27 @@
+@import "../../styles/vars";
+
+.banner {
+  padding: 150px;
+  box-shadow: -10px 10px 80px #DBBFBD;
+  border-radius: 300px;
+
+  position: relative;
+  left: -170px;
+
+  @include media-breakpoint-down(md) {
+    padding: 50px;
+    left: 0;
+    .image{
+      width: 200px;
+    }
+  }
+  .text{
+    margin: 0 30px;
+  }
+  .image-wrapper{
+    margin-left: 10%;
+  }
+  .image{
+    position: absolute;
+  }
+}

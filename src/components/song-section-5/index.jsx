@@ -4,6 +4,7 @@ import image1 from '../../assets/photo.png'
 import box from '../../assets/box-h.png'
 import { I18nContext } from '../../layouts/base-layout'
 import SongIndexHelper from "../song-index-helper";
+import WithHeaderAnimation from '../WithHeaderAnimation'
 
 
 const images = [...new Float32Array(4)].map(
@@ -18,7 +19,9 @@ const SongSection4 = () => {
         <section className='container song-section song-section-5'>
             <div className="row">
                 <div className="col-12">
-                    <h2 className='col col-sm-8'>{songSection5.header}</h2>
+                    {/*<h2 className='col col-sm-8'>{songSection5.header}</h2>*/}
+                    {WithHeaderAnimation([songSection5.header])}
+
                     <div className="image-wrapper">
                         <img src={image1} alt="Winner" />
                         {images}

@@ -1,5 +1,5 @@
-import React, {useEffect, useState} from "react";
-import {useSpring, animated, useTransition} from 'react-spring'
+import React, { useState} from "react";
+import {useSpring, animated} from 'react-spring'
 import {InView} from 'react-intersection-observer'
 
 const WithOpacityAnimation = ({children}) => {

@@ -1,9 +1,9 @@
 import React, { useContext } from 'react'
 import './index.scss'
 import image1 from '../../assets/man.png'
-import boxImage from '../../assets/box.png'
 import { I18nContext } from '../../layouts/base-layout'
 import SongIndexHelper from "../song-index-helper";
+import WithHeaderAnimation from '../WithHeaderAnimation'
 
 const SongSection4 = () => {
     const { songSection4 } = useContext(I18nContext)
@@ -16,8 +16,9 @@ const SongSection4 = () => {
                     <img style={{ top: '400px', right: '-50px' }} className='image d-none d-sm-block' src={image1} alt="Man" />
                     <img style={{ bottom: '-200px', left: '-300px', transform: 'rotate(40deg)' }} className='image d-none d-sm-block' src={image1} alt="Man" />
                     <img style={{ bottom: '250px', left: '-250px' }} className='image d-none d-sm-block' src={image1} alt="Man" />
-                    <img style={{ bottom: '-250px', right: '-250px' }} className='image' src={boxImage} alt="Headphones" />
-                    <h2>{songSection4.header}</h2>
+                    {/*<h2>{songSection4.header}</h2>*/}
+                    {WithHeaderAnimation([songSection4.header])}
+
                     {SongIndexHelper(4)}
 
                 </div>

@@ -4,6 +4,7 @@ import image1 from '../../assets/wagner.png'
 import image2 from '../../assets/vagner.png'
 import { I18nContext } from '../../layouts/base-layout'
 import SongIndexHelper from "../song-index-helper";
+import WithHeaderAnimation from '../WithHeaderAnimation'
 
 const SongSection3 = () => {
     const { songSection3 } = useContext(I18nContext);
@@ -14,7 +15,9 @@ const SongSection3 = () => {
                 <div className="col-12">
                     <img style={{ top: '33%', right: '3%' }} className='image wagner' src={image1} alt="Wagner" />
                     <img style={{ top: '0px', right: '30%', zIndex: -1}} className='image wagner-small' src={image2} alt="Wagner small" />
-                    <h2 dangerouslySetInnerHTML={{__html:songSection3.header}}/>
+                    {/*<h2 dangerouslySetInnerHTML={{__html:songSection3.header}}/>*/}
+                    {WithHeaderAnimation([songSection3.header])}
+
                     {SongIndexHelper(3)}
                 </div>
 

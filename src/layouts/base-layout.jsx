@@ -9,6 +9,7 @@ import SongSection3 from '../components/song-section-3'
 import SongSection4 from '../components/song-section-4'
 import SongSection5 from '../components/song-section-5'
 import SongSection6 from '../components/song-section-6'
+import Banner from '../components/banner'
 
 export const I18nContext = React.createContext();
 
@@ -33,6 +34,7 @@ const Layout = ({ data }) => {
             <Player />
 
             <BannerSection />
+            <Banner />
             <SongSection1 />
             <SongSection2 />
             <SongSection3 />

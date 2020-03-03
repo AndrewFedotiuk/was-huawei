@@ -21,7 +21,7 @@ const WithHeaderAnimation = (items) => {
 						key={items[index]}
 						className="trails-text"
 						style={{...rest, transform: x.interpolate(x => `translate3d(0,${x}px,0)`)}}>
-						<animated.div style={{height}}>{items[index]}</animated.div>
+						<animated.div dangerouslySetInnerHTML={{__html:items[index]}}/>
 					</animated.h2>
 				))
 			}

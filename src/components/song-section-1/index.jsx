@@ -18,9 +18,7 @@ const SongSection1 = () => {
 					<img style={{top: '20px', right: '-40px'}} className='image star' src={starImage} alt="Star"/>
 				</div>
 				<div className="header-wrapper">
-					{
-						WithHeaderAnimation([songSection1.header])
-					}
+					{WithHeaderAnimation([songSection1.header])}
 					{/*<h2 className='col'>{songSection1.header}</h2>*/}
 					<p className="col d-sm-block d-sm-none"
 					   dangerouslySetInnerHTML={{__html: songSection1.imageCaption}}/>
@@ -28,7 +26,7 @@ const SongSection1 = () => {
 					{SongIndexHelper(1)}
 				</div>
 
-				<WithOpacityAnimation>
+				{/*<WithOpacityAnimation>*/}
 					<div className="col-md-7">
 						<p>{songSection1.text1}</p>
 						<p>{songSection1.text2}</p>
@@ -55,7 +53,7 @@ const SongSection1 = () => {
 						        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
 						        allowFullScreen/>
 					</div>
-				</WithOpacityAnimation>
+				{/*</WithOpacityAnimation>*/}
 			</div>
 		</section>
 	)
