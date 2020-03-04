@@ -1,8 +1,14 @@
 import React, {useState} from 'react'
 import ReactHowler from 'react-howler'
 import raf from 'raf' // requestAnimationFrame polyfill
-import testSong from '../../assets/BS_TF.mp3'
-import chistmasSong from '../../assets/chistmas.mp3'
+
+import sopphoSong from '../../assets/music/Songs of Sappho, Painetai.mp3'
+import machSong from '../../assets/music/Sans cuer dolens - Guillaume de Machaut.mp3'
+import WagnerhSong from '../../assets/music/Wagner - Siegfried Idyll (Proms 2012).mp3'
+import nightSong from '../../assets/music/Ніч яка місячна, зоряна, ясная.mp3'
+import abbaSong from '../../assets/music/Abba - The Winner Takes It All (Official Video).mp3'
+import ericSong from '../../assets/music/Eric Clapton - Layla (Unplugged 1992) (Promo Only).mp3'
+
 import './index.scss'
 import Pause from "./pause";
 import Play from "./play";
@@ -15,14 +21,34 @@ let player = React.createRef(),
 	_raf;
 const songs = [
 	{
-		name: 'Фрагмент 31,<br> Сапфо',
-		src: testSong,
+		name: 'Songs of Sappho, Painetai',
+		src: sopphoSong,
 		id: 0
 	},
 	{
-		name: 'chistmas Song 31,<br> Сапфо 2',
-		src: chistmasSong,
+		name: 'Sans cuer dolens - Guillaume de Machaut',
+		src: machSong,
 		id: 1
+	},
+	{
+		name: 'Wagner - Siegfried Idyll (Proms 2012)',
+		src: WagnerhSong,
+		id: 2
+	},
+	{
+		name: 'Ніч яка місячна',
+		src: nightSong,
+		id: 3
+	},
+	{
+		name: 'Abba - The Winner Takes It All',
+		src: abbaSong,
+		id: 4
+	},
+	{
+		name: 'Eric Clapton - Layla',
+		src: ericSong,
+		id: 5
 	}
 ];
 
@@ -169,7 +195,7 @@ const Player = () => {
 							{(playerValues.duration) ? updateTime(playerValues.duration) : 'Loading...'}
                         </span>
 					</div>
-					<span className='' dangerouslySetInnerHTML={{__html: songController.activeSong.name}}/>
+					<span className='align-self-center' dangerouslySetInnerHTML={{__html: songController.activeSong.name}}/>
 					<div className='control-wrapper d-flex justify-content-end'>
 						<input
 							className='player-input d-none d-sm-inline'

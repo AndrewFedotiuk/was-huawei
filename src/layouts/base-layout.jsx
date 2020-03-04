@@ -1,4 +1,5 @@
 import React from 'react'
+// import 'intersection-observer'
 import Helmet from 'react-helmet'
 import BannerSection from '../components/banner-section'
 import '../styles/index.scss'
@@ -21,7 +22,11 @@ import Footer from "../components/footer/footer";
 export const I18nContext = React.createContext();
 
 const Layout = ({ data }) => {
-
+    async function loadPolyfills() {
+        if (typeof window.IntersectionObserver === 'undefined') {
+            await import('intersection-observer')
+        }
+    }
     return (
         <I18nContext.Provider value={data}>
             <Helmet

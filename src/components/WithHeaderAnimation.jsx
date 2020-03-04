@@ -7,7 +7,7 @@ const WithHeaderAnimation = (items) => {
 	const config = { mass: 15, tension: 2700, friction: 200 };
 	const trail = useTrail(items.length, {
 		config,
-		delay: 400,
+		delay: 250,
 		opacity: toggle ? 1 : 0,
 		x: toggle ? 0 : 100,
 		from: {opacity: 0, x: 500},
