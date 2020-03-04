@@ -16,6 +16,7 @@ import bannerImage3 from '../assets/box-v-out.png'
 import bannerImage4 from '../assets/box-h.png'
 
 import Banner from '../components/banner'
+import Footer from "../components/footer/footer";
 
 export const I18nContext = React.createContext();
 
@@ -38,6 +39,7 @@ const Layout = ({ data }) => {
 
             <Player />
 
+
             <BannerSection />
             <SongSection1 />
             <Banner image={bannerImage1} text={data.banner1} />
@@ -49,7 +51,7 @@ const Layout = ({ data }) => {
             <SongSection5 />
             <Banner image={bannerImage4} text={data.banner4} />
             <SongSection6 />
-
+            <Footer/>
         </I18nContext.Provider>
     );
 };

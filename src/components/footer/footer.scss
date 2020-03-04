@@ -1,0 +1,22 @@
+@import '../../styles/vars';
+
+.footer {
+	background-position: 0 top;
+	padding: 250px 0 50px;
+
+	@include bg($wave2);
+
+	p {
+		margin-bottom: 0;
+	}
+
+	button {
+		border-radius: 100px;
+		height: 83px;
+		border: 1px dotted black;
+		@include media-breakpoint-down(sm) {
+			margin: 20px;
+		}
+	}
+
+}
