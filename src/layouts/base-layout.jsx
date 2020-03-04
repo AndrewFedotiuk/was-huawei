@@ -19,6 +19,8 @@ import bannerImage4 from '../assets/box-h.png'
 import Banner from '../components/banner'
 import Footer from "../components/footer/footer";
 
+import cover from '../assets/cover.png'
+
 export const I18nContext = React.createContext();
 
 const Layout = ({ data }) => {
@@ -30,14 +32,22 @@ const Layout = ({ data }) => {
     return (
         <I18nContext.Provider value={data}>
             <Helmet
-                title="HUAWEI FreeBuds 3"
-
+                title={data.metaRu.title}
                 link={[
                     { "rel": "stylesheet", "href": "https://fonts.googleapis.com/css?family=PT+Serif&display=swap" },
                 ]}
 
                 meta={[
-                    { name: 'description', content: 'HUAWEI FreeBuds 3.' },
+                    { name: 'description', content: data.metaRu.description },
+                    { name: 'og:description', content: data.metaRu.description},
+                    { name: 'og:title', content: data.metaRu.title },
+                    { name: 'og:locale', content: data.metaRu.lang },
+                    { name: 'og:url', content: data.metaRu.url },
+                    { name: 'og:image', content: cover },
+                    { name: 'fb:app_id', content: '266741733751086' },
+                    { name: 'og:image:width', content: '1920' },
+                    { name: 'og:image:height', content: '1080' },
+                    { name: 'og:site_name', content: "HUAWEI WAS MEDIA" },
                 ]}
             >
             </Helmet>

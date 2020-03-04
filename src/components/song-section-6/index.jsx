@@ -1,7 +1,6 @@
 import React, {useContext} from 'react'
 import './index.scss'
 import image1 from '../../assets/photo2.png'
-import boxImage from '../../assets/box-v.png'
 import {I18nContext} from '../../layouts/base-layout'
 import SongIndexHelper from "../song-index-helper";
 import WithHeaderAnimation from '../WithHeaderAnimation'
@@ -13,7 +12,7 @@ const SongSection6 = () => {
 	return (
 		<section className='container song-section song-section-6'>
 			<div className="row">
-				<div className="col-sm-10">
+				<div className="col-12">
 					{/*<h2 className='col-sm-8'>{songSection6.header}</h2>*/}
 					{WithHeaderAnimation([songSection6.header])}
 

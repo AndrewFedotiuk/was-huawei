@@ -1,11 +1,10 @@
-import React, {useContext, useState} from 'react'
+import React, {useContext} from 'react'
 import {I18nContext} from '../../layouts/base-layout'
 import saphoImage from '../../assets/sapho.png'
 import starImage from '../../assets/star.png'
 import './index.scss'
 import SongIndexHelper from "../song-index-helper";
 import WithHeaderAnimation from "../WithHeaderAnimation";
-import WithOpacityAnimation from "../with-opacity-animation";
 
 const SongSection1 = () => {
 	const {songSection1} = useContext(I18nContext);
@@ -17,16 +16,14 @@ const SongSection1 = () => {
 					<img src={saphoImage} className='sapho' alt="Sapho"/>
 					<img style={{top: '20px', right: '-40px'}} className='image star' src={starImage} alt="Star"/>
 				</div>
-				<div className="header-wrapper">
+				<div className="col-12 header-wrapper">
 					{WithHeaderAnimation([songSection1.header])}
-					{/*<h2 className='col'>{songSection1.header}</h2>*/}
-					<p className="col d-sm-block d-sm-none"
+					<p className="d-sm-block d-sm-none"
 					   dangerouslySetInnerHTML={{__html: songSection1.imageCaption}}/>
 
 					{SongIndexHelper(1)}
 				</div>
 
-				{/*<WithOpacityAnimation>*/}
 				<div className="col-md-7">
 					<p>{songSection1.text1}</p>
 					<p>{songSection1.text2}</p>
@@ -54,10 +51,9 @@ const SongSection1 = () => {
 					        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
 					        allowFullScreen/>
 				</div>
-				{/*</WithOpacityAnimation>*/}
 			</div>
 		</section>
 	)
-}
+};
 
 export default SongSection1
