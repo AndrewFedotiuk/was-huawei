@@ -3,11 +3,6 @@
 .song-section1 {
 	position: relative;
 
-
-	.poem {
-		margin: 40px 70px 80px;
-	}
-
 	.image-wrapper {
 		display: flex;
 		flex-direction: column;
@@ -22,7 +17,7 @@
 		margin-bottom: 20px;
 	}
 
-	.star{
+	.star {
 		animation: rotating linear 8s infinite;
 	}
 
@@ -31,7 +26,7 @@
 			position: absolute;
 			right: -50%;
 		}
-		.sapho{
+		.sapho {
 			width: 320px;
 		}
 		.poem {
@@ -41,10 +36,10 @@
 }
 
 @keyframes rotating {
-	from{
+	from {
 		transform: rotate(0turn);
 	}
-	to{
+	to {
 		transform: rotate(1turn);
 	}
 }

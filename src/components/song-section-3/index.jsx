@@ -24,8 +24,6 @@ const SongSection3 = () => {
                 <div className="col-md-7">
                     <p>{songSection3.text1}</p>
                     <p>{songSection3.text2}</p>
-                    <p>{songSection3.text3}</p>
-                    <p>{songSection3.text4}</p>
                 </div>
                 <div className="col-md-5 video-section">
                     <iframe className='youtube-iframe' title='Guillaume de Machaut' width="260" src="https://www.youtube.com/embed/kKMBx6x-lOI" frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen />

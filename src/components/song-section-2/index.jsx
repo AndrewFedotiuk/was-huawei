@@ -23,7 +23,11 @@ const SongSection2 = () => {
                 <div className="col-md-7">
                     <p>{songSection2.text1}</p>
                     <p>{songSection2.text2}</p>
+                    <div className="poem">
+                        <p dangerouslySetInnerHTML={{__html: songSection2.poem}}/>
+                    </div>
                     <p>{songSection2.text3}</p>
+                    <p>{songSection2.text4}</p>
                 </div>
                 <div className="col-md-5 video-section">
                     <iframe className='youtube-iframe' title='Guillaume de Machaut' width="260" src="https://www.youtube.com/embed/kKMBx6x-lOI" frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen />

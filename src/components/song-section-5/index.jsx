@@ -32,6 +32,12 @@ const SongSection4 = () => {
                     <p>{songSection5.text1}</p>
                     <p>{songSection5.text2}</p>
                     <p>{songSection5.text3}</p>
+                    <p>{songSection5.text4}</p>
+                    <p>{songSection5.text5}</p>
+                    <div className="poem">
+                        <p dangerouslySetInnerHTML={{__html: songSection5.poem}}/>
+                    </div>
+                    <p>{songSection5.text6}</p>
                 </div>
                 <div className="col-md-5 video-section">
                     <iframe className='youtube-iframe' title='Из фильма «Дорога на сечь»' width="260" src="https://www.youtube.com/embed/kKMBx6x-lOI" frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen />
