@@ -7,14 +7,13 @@
 		right: 30px;
 		display: flex;
 		flex-direction: column;
+		align-items: center;
 	}
 
 	@include media-breakpoint-down(sm) {
         .image-wrapper{
             position: unset;
-            img{
-                height: 220px;
-            }
+	        margin-bottom: -320px;
         }
 	}
 }

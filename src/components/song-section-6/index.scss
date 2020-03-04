@@ -1,9 +1,6 @@
 @import '../../styles/vars';
 
 .song-section-6 {
-	.m {
-		padding: 150px 0;
-	}
 	@include media-breakpoint-down(sm) {
 		.image{
 			position: unset;

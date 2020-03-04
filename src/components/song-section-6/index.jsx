@@ -32,9 +32,6 @@ const SongSection6 = () => {
                     <i>{songSection6.videoCaption}</i>
                 </div>
             </div>
-            <div className="row">
-                <img className='col-md-6 offset-md-6 m' src={boxImage} alt="Headphones" />
-            </div>
         </section >
     )
 };

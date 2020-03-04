@@ -1,27 +1,47 @@
 @import "../../styles/vars";
 
 .banner {
-  padding: 150px;
-  box-shadow: -10px 10px 80px #DBBFBD;
-  border-radius: 300px;
+	padding: 150px;
+	box-shadow: -10px 10px 80px #DBBFBD;
+	border-radius: 150px;
 
-  position: relative;
-  left: -170px;
+	position: relative;
+	left: -170px;
+	margin-bottom: 150px;
 
-  @include media-breakpoint-down(md) {
-    padding: 50px;
-    left: 0;
-    .image{
-      width: 200px;
-    }
-  }
-  .text{
-    margin: 0 30px;
-  }
-  .image-wrapper{
-    margin-left: 10%;
-  }
-  .image{
-    position: absolute;
-  }
+
+	.text {
+		margin: 0 30px;
+	}
+
+	.image-wrapper {
+		margin-left: 10%;
+	}
+
+	.image {
+		position: absolute;
+		width: 450px;
+	}
+
+	@include media-breakpoint-down(md) {
+		padding: 50px;
+		left: 0;
+		.image-wrapper {
+			display: flex;
+			margin-left: 0;
+		}
+		.image {
+			position: unset;
+			width: 250px;
+			margin: 20px auto;
+		}
+	}
+	@include media-breakpoint-down(sm) {
+      .text {
+        margin: 20px 10px;
+      }
+        .image {
+          width: 100%;
+		}
+	}
 }

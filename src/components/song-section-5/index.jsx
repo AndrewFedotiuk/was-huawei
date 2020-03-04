@@ -1,7 +1,6 @@
 import React, { useContext } from 'react'
 import './index.scss'
 import image1 from '../../assets/photo.png'
-import box from '../../assets/box-h.png'
 import { I18nContext } from '../../layouts/base-layout'
 import SongIndexHelper from "../song-index-helper";
 import WithHeaderAnimation from '../WithHeaderAnimation'
@@ -25,7 +24,6 @@ const SongSection4 = () => {
                     <div className="image-wrapper">
                         <img src={image1} alt="Winner" />
                         {images}
-                        <img style={{bottom: '0px', right:'50%', transform: 'translateX(50%)'}} className='position-absolute' src={box} alt="Headphones" />
                     </div>
                     {SongIndexHelper(5)}
 

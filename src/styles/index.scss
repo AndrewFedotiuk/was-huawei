@@ -69,10 +69,6 @@ h2 {
 	color: $gray-color;
 	fill: $gray-color;
 }
-//
-//.transition{
-//	//transition: all .5s;
-//}
 
 @include media-breakpoint-down(sm) {
 	.video-section {
