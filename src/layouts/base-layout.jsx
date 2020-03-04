@@ -43,13 +43,24 @@ const Layout = ({ data }) => {
                     { name: 'og:title', content: data.metaRu.title },
                     { name: 'og:locale', content: data.metaRu.lang },
                     { name: 'og:url', content: data.metaRu.url },
-                    { name: 'og:image', content: cover },
+                    { name: 'og:image', content: `https://huawei.was.media${cover}` },
                     { name: 'fb:app_id', content: '266741733751086' },
                     { name: 'og:image:width', content: '1920' },
                     { name: 'og:image:height', content: '1080' },
                     { name: 'og:site_name', content: "HUAWEI WAS MEDIA" },
                 ]}
             >
+                <script async src='https://www.googletagmanager.com/gtag/js?id=UA-159640096-1'/>
+                <script type="text/javascript">
+                    {`
+                        window.dataLayer = window.dataLayer || [];
+                        function gtag(){
+                            dataLayer.push(arguments);
+                        }
+                        gtag('js', new Date());
+                        gtag('config', 'UA-159640096-1');
+                    `}
+                </script>
             </Helmet>
 
             <Player />
