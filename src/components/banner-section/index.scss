@@ -26,6 +26,7 @@
 		font-size: $logo-font-size;
 		color: $was-color;
 		margin: 0;
+		text-decoration:none;
 		@include media-breakpoint-down(sm) {
 			font-size: $logo-font-size-sm;
 		}

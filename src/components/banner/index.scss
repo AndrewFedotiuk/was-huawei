@@ -21,6 +21,8 @@
 	.image {
 		position: absolute;
 		width: 450px;
+		height: 100%;
+		z-index: 1;
 	}
 
 	@include media-breakpoint-down(md) {

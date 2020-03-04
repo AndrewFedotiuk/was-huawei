@@ -17,7 +17,7 @@ const SongSection6 = () => {
 					{/*<h2 className='col-sm-8'>{songSection6.header}</h2>*/}
 					{WithHeaderAnimation([songSection6.header])}
 
-					<img className='image' style={{bottom: '60px', right: '0'}} src={image1} alt="Winner"/>
+					<img className='image' style={{bottom: '0', right: '0'}} src={image1} alt="Winner"/>
 
 					{SongIndexHelper(6)}
 

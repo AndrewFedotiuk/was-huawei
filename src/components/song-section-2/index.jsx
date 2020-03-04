@@ -27,7 +27,6 @@ const SongSection2 = () => {
 						<p dangerouslySetInnerHTML={{__html: songSection2.poem}}/>
 					</div>
 					<p>{songSection2.text3}</p>
-					<p>{songSection2.text4}</p>
 				</div>
 				<div className="col-md-5 video-section">
 					<iframe className='youtube-iframe' title='Guillaume de Machaut' width="260"

@@ -10,12 +10,23 @@
 		margin-bottom: 0;
 	}
 
-	button {
+	.share-btn {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		font-family: 'PT Serif', serif;
+		font-size: $base-font-size;
 		border-radius: 100px;
 		height: 83px;
-		border: 1px dotted black;
+		border: 2px dotted black;
+		background-color: white;
+
 		@include media-breakpoint-down(sm) {
 			margin: 20px;
+		}
+
+		&:hover {
+			filter: invert(1);
 		}
 	}
 

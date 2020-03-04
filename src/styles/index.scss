@@ -40,6 +40,10 @@ h2 {
 	}
 }
 
+.image{
+	height: auto;
+}
+
 .youtube-iframe {
 	margin-bottom: 20px;
 }
@@ -81,7 +85,7 @@ h2 {
 
 .song-index{
 	position: absolute;
-	top: 35px;
+	top: 0;
 	left: 0;
 	font-family: 'DIN';
 	transform: translateX(-100%);

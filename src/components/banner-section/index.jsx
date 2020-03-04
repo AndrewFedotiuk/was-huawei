@@ -20,7 +20,9 @@ const BannerSection = () => {
 
             <div className="container">
                 <div className="row">
-                    <p className="col-sm-3 logo">WAS</p>
+                    <p className='col-sm-3 '>
+                        <a href='https://was.media/' className="logo">WAS</a>
+                    </p>
                     <div className="col-md-7">
                         <p dangerouslySetInnerHTML={{ __html: bannerSection.text1 }} />
                         <p>
