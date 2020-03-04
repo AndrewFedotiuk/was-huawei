@@ -4,6 +4,6 @@ const Problemm = () => (
     <div>
         404
     </div>
-)
+);
 
 export default Problemm

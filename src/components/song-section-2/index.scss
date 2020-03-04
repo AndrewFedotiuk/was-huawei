@@ -1,6 +1,9 @@
 @import '../../styles/vars';
 
 .song-section-2 {
+	.image-rose{
+		animation: rotating linear 28s infinite;
+	}
 	@include media-breakpoint-down(sm) {
 		.caption {
 			margin: 100px 0;
