@@ -67,8 +67,6 @@ const Player = () => {
 	});
 
 	const handleOnLoad = () => {
-		console.log('loaded');
-
 		setValues({
 			...playerValues,
 			loaded: true,

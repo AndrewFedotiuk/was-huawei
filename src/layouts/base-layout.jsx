@@ -17,10 +17,15 @@ import bannerImage3 from '../assets/box-v-out.png'
 import bannerImage4 from '../assets/box-h.png'
 
 import Banner from '../components/banner'
-import Footer from "../components/footer/footer";
+import Footer from "../components/footer/footer"
 
 import cover from '../assets/cover.png'
-import ReactTooltip from "react-tooltip";
+import ReactTooltip from "react-tooltip"
+
+import icon from '../assets/icons/favicon.ico'
+import icon16 from '../assets/icons/favicon-16x16.png'
+import icon32 from '../assets/icons/favicon-32x32.png'
+import iconApple from '../assets/icons/apple-touch-icon.png'
 
 export const I18nContext = React.createContext();
 
@@ -52,6 +57,10 @@ const Layout = ({ data }) => {
                     { name: 'og:site_name', content: "HUAWEI WAS MEDIA" },
                 ]}
             >
+                <link rel="icon" type="image/ico" href={icon}/>
+                <link rel="icon" type="image/png" sizes="32x32" href={icon16}/>
+                <link rel="icon" type="image/png" sizes="32x32" href={icon32}/>
+                <link rel="apple-touch-icon" href={iconApple}/>
                 <script async src='https://www.googletagmanager.com/gtag/js?id=UA-159640096-1'/>
                 <script type="text/javascript">
                     {`
