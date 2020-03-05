@@ -98,6 +98,15 @@ h2 {
 	fill: $gray-color;
 }
 
+.custom-tooltip{
+	width: 200px;
+	font-style: italic;
+}
+
+span[data-tip]{
+	border-bottom: 2px dotted;
+}
+
 @include media-breakpoint-down(sm) {
 	.video-section {
 		align-items: center;

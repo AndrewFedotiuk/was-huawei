@@ -16,12 +16,11 @@ const SongSection2 = () => {
 					{SongIndexHelper(2)}
 					{WithHeaderAnimation([songSection2.header])}
 					{/*<h2>{songSection2.header}</h2>*/}
-					<p className='caption'><i>{songSection2.headerCaption}</i></p>
 					<img style={{top: '40%', left: '-12%'}} className='image image-rose' src={image1} alt="Rose"/>
 					<img style={{top: '34%', right: '-7%'}} className='image image-man' src={image2} alt="Demasho"/>
 				</div>
 				<div className="col-md-7">
-					<p>{songSection2.text1}</p>
+					<p dangerouslySetInnerHTML={{__html: songSection2.text1}}/>
 					<p>{songSection2.text2}</p>
 					<div className="poem">
 						<p dangerouslySetInnerHTML={{__html: songSection2.poem}}/>

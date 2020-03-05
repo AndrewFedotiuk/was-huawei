@@ -26,7 +26,7 @@ const SongSection1 = () => {
 
 				<div className="col-md-7">
 					<p>{songSection1.text1}</p>
-					<p>{songSection1.text2}</p>
+					<p dangerouslySetInnerHTML={{__html: songSection1.text2}}/>
 					<p>{songSection1.text3}</p>
 					<p>{songSection1.text4}</p>
 					<div className="poem">

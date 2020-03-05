@@ -23,6 +23,7 @@ const SongSection3 = () => {
 				</div>
 
 				<div className="col-md-7">
+					<p>{songSection3.text0}</p>
 					<p>{songSection3.text1}</p>
 					<p>{songSection3.text2}</p>
 				</div>

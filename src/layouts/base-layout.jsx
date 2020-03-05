@@ -20,6 +20,7 @@ import Banner from '../components/banner'
 import Footer from "../components/footer/footer";
 
 import cover from '../assets/cover.png'
+import ReactTooltip from "react-tooltip";
 
 export const I18nContext = React.createContext();
 
@@ -31,6 +32,7 @@ const Layout = ({ data }) => {
     }
     return (
         <I18nContext.Provider value={data}>
+            <ReactTooltip place="top" type="dark" effect="float" className='custom-tooltip'/>
             <Helmet
                 title={data.metaRu.title}
                 link={[
