@@ -1,21 +1,23 @@
 @import './vars';
 @import './bootstrap';
 @import './fonts';
+
 body {
 	background-color: $bg-color;
 	font-family: 'PT Serif', serif;
-    color: $black-color;
+	color: $black-color;
 	overflow-x: hidden;
-	padding-top: 85px;
-	#gatsby-focus-wrapper{
+	//padding-top: 85px;
+	#gatsby-focus-wrapper {
 		overflow-x: hidden;
 	}
 }
 
-button{
+button {
 	font-family: 'PT Serif', serif;
 	font-size: $base-font-size;
-	&:hover{
+
+	&:hover {
 		filter: invert(1);
 	}
 }
@@ -25,7 +27,7 @@ p {
 	margin-bottom: 30px;
 }
 
-a{
+a {
 	color: $black-color;
 }
 
@@ -40,7 +42,7 @@ h2 {
 	}
 }
 
-.image{
+.image {
 	height: auto;
 }
 
@@ -57,9 +59,7 @@ h2 {
 
 		@include media-breakpoint-down(sm) {
 
-			.poem {
-				margin: 40px 30px 80px;
-			}
+			margin: 40px 30px 80px;
 		}
 	}
 
@@ -67,6 +67,7 @@ h2 {
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
+
 		i {
 			display: block;
 			font-size: $base-font-size;
@@ -74,6 +75,7 @@ h2 {
 			margin-bottom: 20px;
 		}
 	}
+
 	.image {
 		position: absolute;
 	}
@@ -83,7 +85,7 @@ h2 {
 	transform: scaleX(-1);
 }
 
-.song-index{
+.song-index {
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -93,17 +95,17 @@ h2 {
 	color: $index-color;
 }
 
-[disabled]{
+[disabled] {
 	color: $gray-color;
 	fill: $gray-color;
 }
 
-.custom-tooltip{
+.custom-tooltip {
 	width: 200px;
 	font-style: italic;
 }
 
-span[data-tip]{
+span[data-tip] {
 	border-bottom: 2px dotted;
 }
 

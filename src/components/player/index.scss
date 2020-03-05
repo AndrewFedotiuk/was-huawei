@@ -9,6 +9,11 @@
 	padding: 20px 0;
 	z-index: 10;
 
+	mark{
+		background-color: transparent;
+		color: $gray-color;
+	}
+
 	.player-wrapper{
 		display: flex;
 		justify-content: space-between;

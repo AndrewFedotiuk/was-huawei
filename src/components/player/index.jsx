@@ -21,32 +21,32 @@ let player = React.createRef(),
 	_raf;
 const songs = [
 	{
-		name: 'Songs of Sappho, Painetai',
+		name: '<mark>1.</mark> Songs of Sappho, Painetai',
 		src: sopphoSong,
 		id: 0
 	},
 	{
-		name: 'Sans cuer dolens - Guillaume de Machaut',
+		name: '<mark>2.</mark> Sans cuer dolens - Guillaume de Machaut',
 		src: machSong,
 		id: 1
 	},
 	{
-		name: 'Wagner - Siegfried Idyll (Proms 2012)',
+		name: '<mark>3.</mark> Wagner - Siegfried Idyll (Proms 2012)',
 		src: WagnerhSong,
 		id: 2
 	},
 	{
-		name: 'Ніч яка місячна',
+		name: '<mark>4.</mark> Ніч яка місячна',
 		src: nightSong,
 		id: 3
 	},
 	{
-		name: 'Abba - The Winner Takes It All',
+		name: '<mark>5.</mark> Abba - The Winner Takes It All',
 		src: abbaSong,
 		id: 4
 	},
 	{
-		name: 'Eric Clapton - Layla',
+		name: '<mark>6.</mark> Eric Clapton - Layla',
 		src: ericSong,
 		id: 5
 	}

@@ -3,7 +3,7 @@ import React from 'react'
 import Helmet from 'react-helmet'
 import BannerSection from '../components/banner-section'
 import '../styles/index.scss'
-import Player from '../components/player'
+// import Player from '../components/player'
 import SongSection1 from '../components/song-section-1'
 import SongSection2 from '../components/song-section-2'
 import SongSection3 from '../components/song-section-3'
@@ -74,7 +74,7 @@ const Layout = ({ data }) => {
                 </script>
             </Helmet>
 
-            <Player />
+            {/*<Player />*/}
 
 
             <BannerSection />

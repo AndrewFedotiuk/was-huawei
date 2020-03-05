@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {useState, useEffect} from "react";
 import {useTrail, animated} from 'react-spring'
 import { InView } from 'react-intersection-observer'
 
