@@ -5,6 +5,7 @@ import image2 from '../../assets/demasho.png'
 import './index.scss'
 import SongIndexHelper from "../song-index-helper";
 import WithHeaderAnimation from "../WithHeaderAnimation";
+import YoutubeContainer from "../youtube-container";
 
 const SongSection2 = () => {
 	const {songSection2} = useContext(I18nContext);
@@ -28,15 +29,10 @@ const SongSection2 = () => {
 					<p>{songSection2.text3}</p>
 				</div>
 				<div className="col-md-5 video-section">
-					<iframe className='youtube-iframe' title='Guillaume de Machaut' width="260"
-					        src="https://www.youtube.com/embed/GG5f9jvrv2c" frameBorder="0"
-					        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-					        allowFullScreen/>
+					<YoutubeContainer src='GG5f9jvrv2c'/>
 					<i>{songSection2.videoCaption1}</i>
-					<iframe className='youtube-iframe' title='Le Voir Dit' width="260"
-					        src="https://www.youtube.com/embed/v_tcTmgh7FQ" frameBorder="0"
-					        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-					        allowFullScreen/>
+
+					<YoutubeContainer src='v_tcTmgh7FQ'/>
 					<i>{songSection2.videoCaption2}</i>
 				</div>
 			</div>

@@ -4,6 +4,7 @@ import image1 from '../../assets/photo.png'
 import {I18nContext} from '../../layouts/base-layout'
 import SongIndexHelper from "../song-index-helper";
 import WithHeaderAnimation from '../WithHeaderAnimation'
+import YoutubeContainer from "../youtube-container";
 
 
 const images = [...new Float32Array(4)].map(
@@ -40,16 +41,15 @@ const SongSection4 = () => {
 					<p>{songSection5.text4}</p>
 				</div>
 				<div className="col-md-5 video-section">
-					<iframe className='youtube-iframe' title='Из фильма «Дорога на сечь»' width="260"
-					        src="https://www.youtube.com/embed/92cwKCU8Z5c" frameBorder="0"
-					        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-					        allowFullScreen/>
+
+					<YoutubeContainer src='92cwKCU8Z5c' title='Из фильма «Дорога на сечь»'/>
+
 					<i>{songSection5.videoCaption}</i>
 				</div>
 			</div>
 		</section>
 	)
-}
+};
 
 
 export default SongSection4

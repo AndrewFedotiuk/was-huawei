@@ -5,6 +5,7 @@ import image2 from '../../assets/vagner.png'
 import {I18nContext} from '../../layouts/base-layout'
 import SongIndexHelper from "../song-index-helper";
 import WithHeaderAnimation from '../WithHeaderAnimation'
+import YoutubeContainer from "../youtube-container";
 
 const SongSection3 = () => {
 	const {songSection3} = useContext(I18nContext);
@@ -29,10 +30,7 @@ const SongSection3 = () => {
 					<p>{songSection3.text4}</p>
 				</div>
 				<div className="col-md-5 video-section">
-					<iframe className='youtube-iframe' title='Guillaume de Machaut' width="260"
-					        src="https://www.youtube.com/embed/ds7sikMNoCk" frameBorder="0"
-					        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-					        allowFullScreen/>
+					<YoutubeContainer src='ds7sikMNoCk'/>
 
 					<i>{songSection3.videoCaption}</i>
 				</div>

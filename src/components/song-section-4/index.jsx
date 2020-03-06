@@ -4,6 +4,7 @@ import image1 from '../../assets/man.png'
 import {I18nContext} from '../../layouts/base-layout'
 import SongIndexHelper from "../song-index-helper";
 import WithHeaderAnimation from '../WithHeaderAnimation'
+import YoutubeContainer from "../youtube-container";
 
 const SongSection4 = () => {
 	const {songSection4} = useContext(I18nContext)
@@ -37,25 +38,18 @@ const SongSection4 = () => {
 					<p>{songSection4.text5}</p>
 				</div>
 				<div className="col-md-5 video-section">
-					<iframe className='youtube-iframe' title='Из фильма «Дорога на сечь»' width="260"
-					        src="https://www.youtube.com/embed/_W0NRh-RhiE" frameBorder="0"
-					        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-					        allowFullScreen/>
+					<YoutubeContainer src='_W0NRh-RhiE' title='Из фильма «Дорога на сечь»'/>
 					<i>{songSection4.videoCaption1}</i>
-					<iframe className='youtube-iframe' title='Anatoliy Solovianenko' width="260"
-					        src="https://www.youtube.com/embed/OkwPwW8Q5Ls" frameBorder="0"
-					        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-					        allowFullScreen/>
-					<iframe className='youtube-iframe' title='Anatoliy Solovianenko' width="260"
-					        src="https://www.youtube.com/embed/APIUBXsYRIE" frameBorder="0"
-					        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-					        allowFullScreen/>
+
+					<YoutubeContainer src='OkwPwW8Q5Ls' title='Anatoliy Solovianenko'/>
+
+					<YoutubeContainer src='APIUBXsYRIE' title='Anatoliy Solovianenko'/>
 					<i>{songSection4.videoCaption2}</i>
 				</div>
 			</div>
 		</section>
 	)
-}
+};
 
 
 export default SongSection4

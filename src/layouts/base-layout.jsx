@@ -45,16 +45,17 @@ const Layout = ({ data }) => {
                 ]}
 
                 meta={[
-                    { name: 'description', content: data.metaRu.description },
-                    { name: 'og:description', content: data.metaRu.description},
-                    { name: 'og:title', content: data.metaRu.title },
-                    { name: 'og:locale', content: data.metaRu.lang },
-                    { name: 'og:url', content: data.metaRu.url },
-                    { name: 'og:image', content: `https://huawei.was.media${cover}` },
-                    { name: 'fb:app_id', content: '266741733751086' },
-                    { name: 'og:image:width', content: '1920' },
-                    { name: 'og:image:height', content: '1080' },
-                    { name: 'og:site_name', content: "HUAWEI WAS MEDIA" },
+                    { property: 'description', name: 'description', content: data.metaRu.description },
+                    { property: 'og:description', name: 'og:description', content: data.metaRu.description},
+                    { property: 'og:title', name: 'og:title', content: data.metaRu.title },
+                    { property: 'og:locale', name: 'og:locale', content: data.metaRu.lang },
+                    { property: 'og:url', name: 'og:url', content: data.metaRu.url },
+                    { property: 'og:image', name: 'og:image', content: `https://huawei.was.media${cover}` },
+                    { property: 'fb:app_id', name: 'fb:app_id', content: '266741733751086' },
+                    { property: 'og:image:width', name: 'og:image:width', content: '1920' },
+                    { property: 'og:image:height', name: 'og:image:height', content: '1080' },
+                    { property: 'og:site_name', name: 'og:site_name', content: "HUAWEI WAS MEDIA" },
+                    { property: 'og:type', name: 'og:type', content: "website" },
                 ]}
             >
                 <link rel="icon" type="image/ico" href={icon}/>

@@ -1,0 +1,50 @@
+.youtube-container{
+	position: relative;
+	width: 100%;
+	height: 0;
+	padding-bottom: 56.25%;
+	background-color: #000000;
+	margin-bottom: 20px;
+	img, iframe{
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		border: none;
+	}
+	button{
+		display: block;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		z-index: 1;
+		padding: 0;
+		width: 68px;
+		height: 48px;
+		border: none;
+		background-color: transparent;
+		transform: translate(-50%, -50%);
+		cursor: pointer;
+		fill: #212121;
+		opacity: 0.8;
+
+		.shape{
+			transition: opacity, fill .25s cubic-bezier(0.0,0.0,0.2,1);
+		}
+
+		.icon{
+			fill: white;
+		}
+		&:focus, &:hover {
+			filter: unset;
+			outline: none;
+			opacity: 1;
+			.shape{
+				fill: #ff0000;
+				transition: all .25s cubic-bezier(0.0,0.0,0.2,1);
+
+			}
+		}
+	}
+}

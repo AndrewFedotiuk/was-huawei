@@ -5,6 +5,7 @@ import starImage from '../../assets/star.png'
 import './index.scss'
 import SongIndexHelper from "../song-index-helper";
 import WithHeaderAnimation from "../WithHeaderAnimation";
+import YoutubeContainer from "../youtube-container";
 
 const SongSection1 = () => {
 	const {songSection1} = useContext(I18nContext);
@@ -38,18 +39,9 @@ const SongSection1 = () => {
 				</div>
 
 				<div className="col-md-5 video-section">
-					<iframe className='youtube-iframe' title='video1' width="260"
-					        src="https://www.youtube.com/embed/mOlIqozu3Fg" frameBorder="0"
-					        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-					        allowFullScreen/>
-					<iframe className='youtube-iframe' title='video2' width="260"
-					        src="https://www.youtube.com/embed/ybs_qe-t9N4" frameBorder="0"
-					        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-					        allowFullScreen/>
-					<iframe className='youtube-iframe' title='video3' width="260"
-					        src="https://www.youtube.com/embed/fLILuQI5ag8" frameBorder="0"
-					        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-					        allowFullScreen/>
+					<YoutubeContainer src='mOlIqozu3Fg'/>
+					<YoutubeContainer src='ybs_qe-t9N4'/>
+					<YoutubeContainer src='fLILuQI5ag8'/>
 				</div>
 			</div>
 		</section>

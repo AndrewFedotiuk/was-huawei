@@ -100,8 +100,9 @@ h2 {
 	fill: $gray-color;
 }
 
-.custom-tooltip {
-	width: 200px;
+.__react_component_tooltip.custom-tooltip {
+	width: 300px;
+	font-size: $base-font-size;
 	font-style: italic;
 }
 
