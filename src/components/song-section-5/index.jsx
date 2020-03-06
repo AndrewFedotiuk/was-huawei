@@ -33,8 +33,6 @@ const SongSection4 = () => {
 					<p>{songSection5.text1}</p>
 					<p>{songSection5.text2}</p>
 					<p>{songSection5.text3}</p>
-					{/*<p>{songSection5.text4}</p>*/}
-					{/*<p>{songSection5.text5}</p>*/}
 					<div className="poem">
 						<p dangerouslySetInnerHTML={{__html: songSection5.poem}}/>
 					</div>
