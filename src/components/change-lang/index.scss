@@ -1,0 +1,11 @@
+@import "../../styles/vars";
+.change-lang{
+	margin-top: 35px;
+	font-size: $base-font-size;
+	a{
+		text-decoration: underline;
+		&.active{
+			color: $index-color;
+		}
+	}
+}

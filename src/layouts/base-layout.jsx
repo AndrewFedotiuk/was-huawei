@@ -27,6 +27,7 @@ import icon from '../assets/icons/favicon.ico'
 import icon16 from '../assets/icons/favicon-16x16.png'
 import icon32 from '../assets/icons/favicon-32x32.png'
 import iconApple from '../assets/icons/apple-touch-icon.png'
+import ChangeLang from "../components/change-lang";
 
 export const I18nContext = React.createContext();
 
@@ -79,7 +80,7 @@ const Layout = ({ data }) => {
             {/*<Player />*/}
 
 
-
+            <ChangeLang/>
             <BannerSection />
             <SongSection1 />
             <Banner image={bannerImage1} text={data.banner1} />
