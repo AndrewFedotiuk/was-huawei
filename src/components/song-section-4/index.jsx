@@ -28,6 +28,8 @@ const SongSection4 = () => {
 
 				</div>
 				<div className="col-md-7">
+					<p className="offset-1 caption" dangerouslySetInnerHTML={{__html: songSection4.imageCaption}}/>
+
 					<p dangerouslySetInnerHTML={{__html: songSection4.text1}}/>
 					<p>{songSection4.text2}</p>
 					<p>{songSection4.text3}</p>
@@ -35,13 +37,10 @@ const SongSection4 = () => {
 						<p dangerouslySetInnerHTML={{__html: songSection4.poem}}/>
 					</div>
 					<p>{songSection4.text4}</p>
-					<p>{songSection4.text5}</p>
 				</div>
 				<div className="col-md-5 video-section">
 					<YoutubeContainer src='_W0NRh-RhiE' title='Из фильма «Дорога на сечь»'/>
 					<i>{songSection4.videoCaption1}</i>
-
-					<YoutubeContainer src='OkwPwW8Q5Ls' title='Anatoliy Solovianenko'/>
 
 					<YoutubeContainer src='APIUBXsYRIE' title='Anatoliy Solovianenko'/>
 					<i>{songSection4.videoCaption2}</i>

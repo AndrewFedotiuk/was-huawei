@@ -21,6 +21,8 @@ const SongSection6 = () => {
 					{SongIndexHelper(6)}
 				</div>
 				<div className="col-md-7">
+					<p className="offset-1 caption" dangerouslySetInnerHTML={{__html: songSection6.imageCaption}}/>
+
 					{ Array(6).fill(0).map((_, index) => <p key={index}>{songSection6[`text${index + 1}`]}</p>)}
 				</div>
 				<div className="col-md-5 video-section">

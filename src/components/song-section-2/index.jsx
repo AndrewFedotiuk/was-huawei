@@ -21,8 +21,10 @@ const SongSection2 = () => {
 					<img style={{top: '34%', right: '-7%'}} className='image image-man' src={image2} alt="Demasho"/>
 				</div>
 				<div className="col-md-7">
+					<p className="offset-1 caption" dangerouslySetInnerHTML={{__html: songSection2.imageCaption}}/>
+
 					<p dangerouslySetInnerHTML={{__html: songSection2.text1}}/>
-					<p>{songSection2.text2}</p>
+					<p dangerouslySetInnerHTML={{__html: songSection2.text2}}/>
 					<div className="poem">
 						<p dangerouslySetInnerHTML={{__html: songSection2.poem}}/>
 					</div>

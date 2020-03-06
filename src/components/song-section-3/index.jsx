@@ -24,6 +24,7 @@ const SongSection3 = () => {
 				</div>
 
 				<div className="col-md-7">
+					<p className="offset-1 caption" dangerouslySetInnerHTML={{__html: songSection3.imageCaption}}/>
 					<p>{songSection3.text1}</p>
 					<p>{songSection3.text2}</p>
 					<p>{songSection3.text3}</p>

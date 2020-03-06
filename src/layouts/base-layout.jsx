@@ -20,6 +20,7 @@ import Banner from '../components/banner'
 import Footer from "../components/footer/footer"
 
 import cover from '../assets/cover.png'
+import cover2 from '../assets/cover-d.png'
 import ReactTooltip from "react-tooltip"
 
 import icon from '../assets/icons/favicon.ico'
@@ -50,7 +51,7 @@ const Layout = ({ data }) => {
                     { property: 'og:title', name: 'og:title', content: data.metaRu.title },
                     { property: 'og:locale', name: 'og:locale', content: data.metaRu.lang },
                     { property: 'og:url', name: 'og:url', content: data.metaRu.url },
-                    { property: 'og:image', name: 'og:image', content: `https://huawei.was.media${cover}` },
+                    { property: 'og:image', name: 'og:image', content: `https://huawei.was.media${data.metaRu.lang==="uk-UK"?cover2:cover}` },
                     { property: 'fb:app_id', name: 'fb:app_id', content: '266741733751086' },
                     { property: 'og:image:width', name: 'og:image:width', content: '1920' },
                     { property: 'og:image:height', name: 'og:image:height', content: '1080' },
@@ -76,6 +77,7 @@ const Layout = ({ data }) => {
             </Helmet>
 
             {/*<Player />*/}
+
 
 
             <BannerSection />

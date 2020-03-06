@@ -19,8 +19,7 @@ const SongSection1 = () => {
 				</div>
 				<div className="col-12 header-wrapper">
 					{WithHeaderAnimation([songSection1.header])}
-					<p className="d-sm-block d-sm-none"
-					   dangerouslySetInnerHTML={{__html: songSection1.imageCaption}}/>
+					<p className="offset-1 caption" dangerouslySetInnerHTML={{__html: songSection1.imageCaption}}/>
 
 					{SongIndexHelper(1)}
 				</div>

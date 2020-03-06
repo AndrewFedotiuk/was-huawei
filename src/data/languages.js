@@ -1,6 +1,6 @@
 module.exports = {
     langs: [
-        'ru'
+        'ru', 'ua'
     ],
     defaultLangKey: 'ru'
 };
