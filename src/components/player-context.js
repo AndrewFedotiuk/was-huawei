@@ -1,9 +1,9 @@
-const PlayerModel = {
+const playerModel = {
 	activeId: 'mOlIqozu3Fg',
 	activeText: 'test 1',
 	playing: false,
 	volume: 100,
-	mute: false,
+	muted: false,
 	playlist: [
 		{
 			id: 'mOlIqozu3Fg',
@@ -29,11 +29,7 @@ const PlayerModel = {
 			id: 'XrvXGdDNYd4',
 			text: 'test 6'
 		}
-	],
-
-	setPlaying(status) {
-		this.playing = status;
-	},
+	]
 };
 
-export default PlayerModel
+export default playerModel

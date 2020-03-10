@@ -1,9 +1,9 @@
-import React, {useState ,createContext} from 'react'
+import React, {useState, createContext} from 'react'
 // import 'intersection-observer'
 import Helmet from 'react-helmet'
 import BannerSection from '../components/banner-section'
 import '../styles/index.scss'
-import PlayerModel from '../components/player-context'
+import playerModel from '../components/player-context'
 import Player from '../components/player'
 import SongSection1 from '../components/song-section-1'
 import SongSection2 from '../components/song-section-2'
@@ -38,19 +38,43 @@ const Layout = ({data}) => {
 		}
 	}
 
-	const setActiveSong = ({id, text})=> {
+	const setActiveSong = ({id, text}) => {
 		setState({
 			...state,
-			activeId:id,
-			activeText:text
+			activeId: id,
+			activeText: text
 		});
 	};
 
-	const [state, setState] = useState({
-		...PlayerModel,
-		setActiveSong
-	});
+	const setPlaying = (status) => {
+		setState({
+			...state,
+			playing: status
+		})
+	};
 
+	const toggleMute = () => {
+		setState(prevState => ({
+			...prevState,
+			muted: !prevState.muted
+		}))
+	};
+
+	const setVolume = (e) => {
+		e.persist();
+		setState({
+			...state,
+			volume: e.target.value
+		})
+	};
+
+	const [state, setState] = useState({
+		...playerModel,
+		setActiveSong,
+		setPlaying,
+		toggleMute,
+		setVolume
+	});
 
 
 	return (

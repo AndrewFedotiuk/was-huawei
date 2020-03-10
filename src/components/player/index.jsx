@@ -1,4 +1,4 @@
-import React, {useState, useContext, useEffect} from 'react'
+import React, {useContext} from 'react'
 import './index.scss'
 import Pause from "./pause";
 import Play from "./play";
@@ -8,18 +8,10 @@ import Arrow from "./arrow";
 import {PlayerDataContext} from "../../layouts/base-layout";
 
 const Player = () => {
-	const {activeId, activeText} = useContext(PlayerDataContext);
-	const [song, setSong] = useState();
-
-	useEffect(()=>{
-		setSong({
-			activeId,
-			activeText
-		});
-	}, [activeId]);
+	const {activeId, activeText, muted, toggleMute, setVolume, volume} = useContext(PlayerDataContext);
 
 	const handlePlay = () => {
-		const elem = document.querySelector('.youtube-container .button');
+		// const elem = document.querySelector('.youtube-container .button');
 		// console.log(playerData);
 
 	};
@@ -51,7 +43,7 @@ const Player = () => {
                         </span>
 				</div>
 				<span className='align-self-center'>
-					{song ? song.activeText : null}
+					{activeText}
 				</span>
 				<div className='control-wrapper d-flex justify-content-end'>
 					<input
@@ -60,13 +52,12 @@ const Player = () => {
 						min='0'
 						max='100'
 						step='5'
-						// value={playerValues.volume}
+						value={volume}
 						style={{verticalAlign: 'bottom'}}
-						// onChange={volumeHandler}
+						onChange={setVolume}
 					/>
-					<button className='player-btn'>
-						{/*{(playerValues.mute) ? <UnMute/> : <Mute/>}*/}
-						<Mute/>
+					<button className='player-btn' onClick={toggleMute}>
+						{(muted) ? <UnMute/> : <Mute/>}
 					</button>
 
 				</div>
