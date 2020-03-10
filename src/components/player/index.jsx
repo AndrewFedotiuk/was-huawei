@@ -1,4 +1,4 @@
-import React, {useState, useContext} from 'react'
+import React, {useState, useContext, useEffect} from 'react'
 import './index.scss'
 import Pause from "./pause";
 import Play from "./play";
@@ -8,11 +8,19 @@ import Arrow from "./arrow";
 import {PlayerDataContext} from "../../layouts/base-layout";
 
 const Player = () => {
-	const songId = useContext(PlayerDataContext);
+	const {activeId, activeText} = useContext(PlayerDataContext);
+	const [song, setSong] = useState();
 
-	const handlePlay = ()=>{
+	useEffect(()=>{
+		setSong({
+			activeId,
+			activeText
+		});
+	}, [activeId]);
+
+	const handlePlay = () => {
 		const elem = document.querySelector('.youtube-container .button');
-		console.log(songId);
+		// console.log(playerData);
 
 	};
 
@@ -24,42 +32,44 @@ const Player = () => {
 
 			<div className="player-wrapper">
 
-					<div className='control-wrapper'>
-						<button className="player-btn btn-arrow btn-m">
-							<Arrow/>
-						</button>
-						<button className='player-btn btn-m' onClick={handlePlay}>
-							<Play/>
-							{/*{(playerValues.playing) ? <Pause/> : <Play/>}*/}
-						</button>
-						<button className="player-btn flip-horizontally btn-m">
-							<Arrow/>
-						</button>
-						<span className='player-status d-none d-sm-inline'>
+				<div className='control-wrapper'>
+					<button className="player-btn btn-arrow btn-m">
+						<Arrow/>
+					</button>
+					<button className='player-btn btn-m' onClick={handlePlay}>
+						<Play/>
+						{/*{(playerValues.playing) ? <Pause/> : <Play/>}*/}
+					</button>
+					<button className="player-btn flip-horizontally btn-m">
+						<Arrow/>
+					</button>
+					<span className='player-status d-none d-sm-inline'>
 							00:00
-                            {/*{!isNaN(playerValues.seek) ? updateTime(playerValues.seek) : '0:00'}*/}
-							{/*{' / '}*/}
-							{/*{(playerValues.duration) ? updateTime(playerValues.duration) : 'Loading...'}*/}
+						{/*{!isNaN(playerValues.seek) ? updateTime(playerValues.seek) : '0:00'}*/}
+						{/*{' / '}*/}
+						{/*{(playerValues.duration) ? updateTime(playerValues.duration) : 'Loading...'}*/}
                         </span>
-					</div>
-					<span className='align-self-center' dangerouslySetInnerHTML={{__html: 'name of song'}}/>
-					<div className='control-wrapper d-flex justify-content-end'>
-						<input
-							className='player-input d-none d-sm-inline'
-							type='range'
-							min='0'
-							max='1'
-							step='.05'
-							// value={playerValues.volume}
-							style={{verticalAlign: 'bottom'}}
-							// onChange={volumeHandler}
-						/>
-						<button className='player-btn'>
-							{/*{(playerValues.mute) ? <UnMute/> : <Mute/>}*/}
-							<Mute/>
-						</button>
+				</div>
+				<span className='align-self-center'>
+					{song ? song.activeText : null}
+				</span>
+				<div className='control-wrapper d-flex justify-content-end'>
+					<input
+						className='player-input d-none d-sm-inline'
+						type='range'
+						min='0'
+						max='100'
+						step='5'
+						// value={playerValues.volume}
+						style={{verticalAlign: 'bottom'}}
+						// onChange={volumeHandler}
+					/>
+					<button className='player-btn'>
+						{/*{(playerValues.mute) ? <UnMute/> : <Mute/>}*/}
+						<Mute/>
+					</button>
 
-					</div>
+				</div>
 			</div>
 		</div>
 	)

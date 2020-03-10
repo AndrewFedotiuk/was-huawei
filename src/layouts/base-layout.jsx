@@ -1,4 +1,4 @@
-import React, {createContext} from 'react'
+import React, {useState ,createContext} from 'react'
 // import 'intersection-observer'
 import Helmet from 'react-helmet'
 import BannerSection from '../components/banner-section'
@@ -28,7 +28,7 @@ import icon16 from '../assets/icons/favicon-16x16.png'
 import icon32 from '../assets/icons/favicon-32x32.png'
 import iconApple from '../assets/icons/apple-touch-icon.png'
 
-export const I18nContext = React.createContext();
+export const I18nContext = createContext();
 export const PlayerDataContext = createContext();
 
 const Layout = ({data}) => {
@@ -38,9 +38,24 @@ const Layout = ({data}) => {
 		}
 	}
 
+	const setActiveSong = ({id, text})=> {
+		setState({
+			...state,
+			activeId:id,
+			activeText:text
+		});
+	};
+
+	const [state, setState] = useState({
+		...PlayerModel,
+		setActiveSong
+	});
+
+
+
 	return (
 		<I18nContext.Provider value={data}>
-			<PlayerDataContext.Provider value={PlayerModel}>
+			<PlayerDataContext.Provider value={state}>
 				<ReactTooltip place="top" type="dark" effect="float" className='custom-tooltip'/>
 				<Helmet
 					title={data.metaRu.title}
