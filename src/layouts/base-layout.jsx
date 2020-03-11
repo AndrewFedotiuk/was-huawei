@@ -46,11 +46,11 @@ const Layout = ({data}) => {
 		});
 	};
 
-	const setPlaying = (status) => {
-		setState({
-			...state,
-			playing: status
-		})
+	const setPlaying = () => {
+		setState(prevState => ({
+			...prevState,
+			playing: !prevState.playing
+		}))
 	};
 
 	const toggleMute = () => {
@@ -62,10 +62,10 @@ const Layout = ({data}) => {
 
 	const setVolume = (e) => {
 		e.persist();
-		setState({
-			...state,
+		setState(prevState => ({
+			...prevState,
 			volume: e.target.value
-		})
+		}))
 	};
 
 	const [state, setState] = useState({

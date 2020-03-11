@@ -8,13 +8,7 @@ import Arrow from "./arrow";
 import {PlayerDataContext} from "../../layouts/base-layout";
 
 const Player = () => {
-	const {activeId, activeText, muted, toggleMute, setVolume, volume} = useContext(PlayerDataContext);
-
-	const handlePlay = () => {
-		// const elem = document.querySelector('.youtube-container .button');
-		// console.log(playerData);
-
-	};
+	const {activeId, activeText, muted, toggleMute, setVolume, setPlaying, volume, playing} = useContext(PlayerDataContext);
 
 	return (
 		<div className='player'>
@@ -28,9 +22,8 @@ const Player = () => {
 					<button className="player-btn btn-arrow btn-m">
 						<Arrow/>
 					</button>
-					<button className='player-btn btn-m' onClick={handlePlay}>
-						<Play/>
-						{/*{(playerValues.playing) ? <Pause/> : <Play/>}*/}
+					<button className='player-btn btn-m' onClick={setPlaying}>
+						{(playing) ? <Pause/> : <Play/>}
 					</button>
 					<button className="player-btn flip-horizontally btn-m">
 						<Arrow/>
