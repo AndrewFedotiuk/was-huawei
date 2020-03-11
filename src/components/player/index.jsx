@@ -22,7 +22,7 @@ const Player = () => {
 					<button className="player-btn btn-arrow btn-m">
 						<Arrow/>
 					</button>
-					<button className='player-btn btn-m' onClick={setPlaying}>
+					<button className='player-btn btn-m' onClick={()=>setPlaying(!playing)}>
 						{(playing) ? <Pause/> : <Play/>}
 					</button>
 					<button className="player-btn flip-horizontally btn-m">

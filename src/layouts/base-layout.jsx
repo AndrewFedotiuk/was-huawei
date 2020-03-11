@@ -46,11 +46,14 @@ const Layout = ({data}) => {
 		});
 	};
 
-	const setPlaying = () => {
-		setState(prevState => ({
-			...prevState,
-			playing: !prevState.playing
-		}))
+	const setPlaying = (status) => {
+		setState(prevState => {
+
+			return {
+				...prevState,
+				playing: status
+			}
+		})
 	};
 
 	const toggleMute = () => {
