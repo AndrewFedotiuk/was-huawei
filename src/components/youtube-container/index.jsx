@@ -23,11 +23,13 @@ const YoutubeContainer = (props) => {
 	};
 
 	const onPlayerStateChange = ({data}) => {
-		if(data===1 && (activeId !== props.src)){
-			playerInstances[activeId].pauseVideo();
-			setPlaying(false);
+	};
+
+	const nextHandler = ()=>{
+		if(playerInstances[props.src]) playerInstances[props.src].pauseVideo();
+		if(Object.keys(playerInstances).length > 0 && activeId === props.src){
+			setPlaying(true)
 		}
-		if(data===2 && activeId===props.src) setPlaying(false);
 	};
 
 	useEffect(()=>{
@@ -38,6 +40,7 @@ const YoutubeContainer = (props) => {
 		}
 	},[playing]);
 
+	useEffect(()=>nextHandler(), [activeId]);
 	useEffect(()=>muteHandler(), [muted]);
 	useEffect(()=>volumeHandler(), [volume]);
 
@@ -68,8 +71,10 @@ const YoutubeContainer = (props) => {
 		}
 	};
 
+	const pointerNoneClass = (activeId===props.src && playing)?' p-none':'';
+
 	return (
-		<div className='youtube-container'>
+		<div className={`youtube-container${pointerNoneClass}`}>
 			{
 				showIframe
 					? <Iframe {...props} ref={iframeRef}/>

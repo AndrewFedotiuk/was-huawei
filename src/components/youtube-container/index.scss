@@ -13,6 +13,9 @@
 		height: 100%;
 		border: none;
 	}
+	&.p-none{
+		pointer-events: none;
+	}
 	button{
 		display: block;
 		position: absolute;

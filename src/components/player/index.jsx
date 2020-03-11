@@ -8,7 +8,13 @@ import Arrow from "./arrow";
 import {PlayerDataContext} from "../../layouts/base-layout";
 
 const Player = () => {
-	const {activeId, activeText, muted, toggleMute, setVolume, setPlaying, volume, playing} = useContext(PlayerDataContext);
+	const {activeId, setActiveSong , activeText, muted, toggleMute, setVolume, setPlaying, volume, playing, playlist, index} = useContext(PlayerDataContext);
+
+	const nextHandler = ()=>{
+		const newIndex = index+1;
+		const nextSong = playlist[newIndex];
+		setActiveSong({id:nextSong.id,text:nextSong.text, index:newIndex});
+	};
 
 	return (
 		<div className='player'>
@@ -19,13 +25,15 @@ const Player = () => {
 			<div className="player-wrapper">
 
 				<div className='control-wrapper'>
-					<button className="player-btn btn-arrow btn-m">
+					<button disabled={index <= 0} className="player-btn btn-arrow btn-m">
 						<Arrow/>
 					</button>
+
 					<button className='player-btn btn-m' onClick={()=>setPlaying(!playing)}>
 						{(playing) ? <Pause/> : <Play/>}
 					</button>
-					<button className="player-btn flip-horizontally btn-m">
+
+					<button onClick={nextHandler} disabled={index >= playlist.length-1} className="player-btn flip-horizontally btn-m">
 						<Arrow/>
 					</button>
 					<span className='player-status d-none d-sm-inline'>

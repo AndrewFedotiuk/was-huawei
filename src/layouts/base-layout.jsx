@@ -38,11 +38,12 @@ const Layout = ({data}) => {
 		}
 	}
 
-	const setActiveSong = ({id, text}) => {
+	const setActiveSong = ({id, text, index}) => {
 		setState({
 			...state,
 			activeId: id,
-			activeText: text
+			activeText: text,
+			index
 		});
 	};
 

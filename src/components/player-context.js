@@ -1,6 +1,7 @@
 const playerModel = {
 	activeId: 'mOlIqozu3Fg',
 	activeText: 'test 1',
+	index: 0,
 	playing: false,
 	volume: 100,
 	muted: false,
